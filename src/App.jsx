@@ -1,11 +1,22 @@
 import './App.css'
+import Hero from './components/Hero'
+import NavBar from './components/NavBar'
+import Pricing from './components/Pricing'
 
 function App() {
 
   return (
-    <>
-      <h1>Hi, Ibrahim</h1>
-    </>
+    <main>
+      {/* <h1 className='text-3xl font-extrabold text-primary'>Hi, Ibrahim</h1>
+      <h1 className='text-3xl font-extrabold text-secondary'>Hi, Ibrahim</h1>
+      <h1 className='text-3xl font-extrabold text-accent'>Hi, Ibrahim</h1>
+      <div className='w-32 h-32 bg-background'></div>
+      <h1 className='text-3xl font-extrabold text-text'>Hi, Ibrahim</h1> */}
+      <NavBar />
+      <div className='pt-[95px]' />
+      <Hero />
+      <Pricing />
+    </main>
   )
 }
 

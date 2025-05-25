@@ -1,0 +1,53 @@
+import logo from "../assets/logo.avif";
+
+const LinkComponent = ({ href, children }) => {
+    return (
+        <a href={href} className="self-center text-md font-semibold text-text hover:text-primary">{children}</a>
+    )
+}
+
+const NavBar = () => {
+    return (
+        <div className="p-4 fixed w-[calc(100%-20px)] top-[10px] left-1/2 transform -translate-x-1/2 z-50 backdrop-blur-md bg-background/50 shadow-md rounded-lg">
+            <div className="grid grid-cols-3">
+                <div className="flex items-center justify-between">
+                    <img src={logo} alt="logo" className="w-8 h-8" />
+                    {/* <h1 className="text-xl font-extrabold text-primary">Zepto Sign Customizer</h1> */}
+                </div>
+                {/* Nav menu with dropdown if needed and responsive */}
+                <nav className="hidden md:flex gap-6 justify-center">
+                    <LinkComponent href="/">Home</LinkComponent>
+                    <LinkComponent href="#features">Features</LinkComponent>
+                    <LinkComponent href="#pricing">Pricing</LinkComponent>
+                    <LinkComponent href="/">Contact us</LinkComponent>
+                    {/* <div className="relative group">
+                        <button className="text-base text-primary hover:underline flex items-center gap-1">
+                            More
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
+                        </button>
+                        <div className="absolute left-0 mt-2 w-32 bg-white rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity z-10">
+                            <a href="#faq" className="block px-4 py-2 text-primary hover:bg-gray-100">FAQ</a>
+                            <a href="#contact" className="block px-4 py-2 text-primary hover:bg-gray-100">Contact</a>
+                        </div>
+                    </div> */}
+                </nav>
+                <div className="flex items-center justify-end">
+                    {/* Extra two buttons for Demo & Try for free */}
+                    <div className="flex gap-2 text-md">
+                        {/* <a href="#demo" className="px-4 py-2 rounded-full border border-primary text-text font-semibold hover:text-primary transition">Demo</a> */}
+                        <a href="#try" className="px-4 py-2 rounded-full text-white bg-gradient-to-r to-accent from-primary hover:scale-[1.04] font-semibold transition">Try for Free</a>
+                    </div>
+                    {/* Hamburger for mobile */}
+                    <div className="md:hidden w-6 h-6">
+                        <button className="text-primary focus:outline-none cursor-pointer">
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    )
+}
+
+export default NavBar

@@ -6,8 +6,8 @@ const Pricing = () => {
         <div>
             <Heading subHeading="Choose the plan that best fits your business needs">Simple, transparent pricing</Heading>
             <div className='max-w-6xl mx-auto px-4'>
-                <div className='grid grid-cols-4 gap-6 mt-10'>
-                    <PackageCard
+                <div className='grid grid-cols-3 gap-6 mt-10'>
+                    {/* <PackageCard
                         title="Free version"
                         price="0"
                         features={[
@@ -20,7 +20,7 @@ const Pricing = () => {
                             "3 sign fixing methods",
                             "Add text to configurator",
                         ]}
-                    />
+                    /> */}
                     <PackageCard
                         title="Essential"
                         price="14.99"

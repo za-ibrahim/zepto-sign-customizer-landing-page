@@ -4,7 +4,7 @@ import ComponentLayout from '../layouts/ComponentLayout'
 
 const Pricing = () => {
     return (
-        <div id='pricing' className='py-15'>
+        <div id='pricing' className='py-15 bg-background/50 pb-24'>
             <Heading subHeading="Choose the plan that best fits your business needs">Simple, transparent pricing</Heading>
             <ComponentLayout>
                 <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6'>

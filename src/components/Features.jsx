@@ -7,37 +7,37 @@ const featuresData = [
         id: 1,
         title: 'Unlimited Product Customization',
         description: 'Go beyond limits with endless customization, offering personalization as unique as your vision.',
-        image: '/assets/Customization.svg', // Assuming you have this image in public/assets
+        image: './assets/01.png',
     },
     {
         id: 2,
         title: 'Various Option Types',
         description: 'Provide Options with Detail: Text, Color, Images, Uploads, & More at Your Command.',
-        image: '/assets/No-Code.svg', // Assuming you have this image in public/assets
+        image: './assets/02.png',
     },
     {
         id: 3,
         title: 'Real Time Preview',
         description: 'Let your customers instantly see their personalized products with our live preview.',
-        image: '/assets/Theme.svg', // Assuming you have this image in public/assets
+        image: './assets/03.png',
     },
     {
         id: 4,
         title: 'Conditional Logic',
         description: 'Use Conditions to narrow customer requirements and deliver the best experience.',
-        image: '/assets/Theme.svg', // Assuming you have this image in public/assets
+        image: './assets/04.png',
     },
     {
         id: 5,
         title: 'Dynamic Pricing',
         description: 'Adjust prices dynamically per personalization and display the price update real-time.',
-        image: '/assets/Theme.svg', // Assuming you have this image in public/assets
+        image: './assets/05.png',
     },
     {
         id: 6,
         title: 'Clean and Responsive',
         description: 'Use different styles to keep your store sleek and functional on any device.',
-        image: '/assets/Theme.svg', // Assuming you have this image in public/assets
+        image: './assets/06.png',
     },
 ];
 
@@ -53,13 +53,13 @@ const Features = () => {
                 <div className="md:hidden w-full">
                     <div className="flex flex-col gap-3"> {/* Reduced gap for tighter accordion look */}
                         {featuresData.map((feature) => (
-                            <div key={feature.id} className="w-full border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+                            <div key={feature.id} className="w-full rounded-lg overflow-hidden shadow-sm">
                                 <button
                                     onClick={() => setSelectedTab(feature.id)}
                                     className={`w-full p-4 text-left font-semibold transition-colors duration-300 flex justify-between items-center
                                                 ${selectedTab === feature.id
-                                            ? 'bg-blue-600 text-white'
-                                            : 'bg-gray-50 hover:bg-gray-100 text-blue-600' // Changed text color for non-active
+                                            ? 'tryBtn text-white'
+                                            : 'bg-background/70' // Changed text color for non-active
                                         }`}
                                 >
                                     {feature.title}
@@ -70,7 +70,7 @@ const Features = () => {
                                     </span>
                                 </button>
                                 <div
-                                    className={`overflow-hidden transition-all duration-500 ease-in-out bg-white
+                                    className={`overflow-hidden transition-all duration-500 ease-in-out bg-background/70
                                                 ${selectedTab === feature.id ? 'max-h-[1000px] opacity-100 visible' : 'max-h-0 opacity-0 invisible'}`}
                                 >
                                     <div className="p-4 border-t border-gray-200"> {/* Added border-t for separation */}
@@ -90,8 +90,7 @@ const Features = () => {
 
                 {/* Layout for medium and larger devices (enhanced original tab style) */}
                 <div className="hidden md:flex flex-row-reverse gap-8 items-start">
-                    {/* Tabs on the right (due to flex-row-reverse) */}
-                    <div className="flex flex-col gap-4 md:w-1/3 lg:w-1/4 sticky top-24"> {/* Adjusted sticky top */}
+                    <div className="flex flex-col gap-4 md:w-1/3 lg:w-1/4">
                         {featuresData.map((feature) => (
                             <button
                                 key={feature.id}
@@ -99,25 +98,24 @@ const Features = () => {
                                 className={`w-full p-4 rounded-xl text-left transition-colors duration-300 font-semibold cursor-pointer overflow-hidden
                                             ${selectedTab === feature.id
                                         ? 'tryBtn text-white shadow-sm'
-                                        : 'bg-background/70 backdrop-blur-lg'
+                                        : 'bg-background/70'
                                     }`}
                             >
                                 {feature.title}
                             </button>
                         ))}
                     </div>
-
-                    {/* Content on the left (due to flex-row-reverse) */}
-                    <div className="flex-1 md:w-2/3 lg:w-3/4">
+                    <div className="flex-1 md:w-2/3 lg:w-3/4 rounded-4xl overflow-hidden shadow-md">
                         {selectedFeature && (
-                            <div className="p-6 bg-background/50 rounded-xl shadow-md min-h-[400px]"> {/* Adjusted min-h */}
+                            <div className="bg-background/50 min-h-[400px]">
                                 <img
                                     src={selectedFeature.image}
                                     alt={selectedFeature.title}
-                                    className="w-full h-72 object-contain mb-6 rounded-md" // Kept h-72
+                                    className="w-full object-contain"
                                 />
-                                <h3 className="text-3xl font-bold mb-4 text-gray-800">{selectedFeature.title}</h3> {/* Larger title */}
-                                <p className="text-gray-700 leading-relaxed text-base">{selectedFeature.description}</p> {/* Base text size */}
+                                <div className='px-6 py-4'>
+                                    <p className="leading-relaxed !text-base">{selectedFeature.description}</p>
+                                </div>
                             </div>
                         )}
                     </div>

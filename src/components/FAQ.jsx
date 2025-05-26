@@ -19,9 +19,9 @@ const faqData = [
 
 // FAQItem subcomponent for reusability
 const FAQItem = ({ question, answer, open, onClick, idx }) => (
-    <div className="bg-background shadow-md rounded-2xl overflow-hidden transition-all duration-400 ease-in-out w-full">
+    <div className="shadow-md rounded-2xl overflow-hidden transition-all duration-400 ease-in-out w-full">
         <button
-            className={`flex flex-row w-full justify-between items-center text-left p-8 text-lg font-medium cursor-pointer`}
+            className={`flex flex-row w-full justify-between items-center bg-background/80 shadow text-left p-8 text-lg font-medium cursor-pointer`}
             onClick={onClick}
             aria-expanded={open}
             aria-controls={`faq-answer-${idx}`}
@@ -44,7 +44,7 @@ const FAQItem = ({ question, answer, open, onClick, idx }) => (
         </button>
         <div
             id={`faq-answer-${idx}`}
-            className={`faq-answer border-t border-primary/40 bg-background  overflow-hidden transition-all duration-400 ease-in-out px-8 ${open ? 'max-h-40 opacity-100 py-8' : 'py-0 max-h-0 opacity-0'}`}
+            className={`faq-answer bg-background/50  overflow-hidden transition-all duration-400 ease-in-out px-8 ${open ? 'max-h-40 opacity-100 py-8' : 'py-0 max-h-0 opacity-0'}`}
         >
             <span>{answer}</span>
         </div>
@@ -59,7 +59,7 @@ const FAQ = () => {
     }
 
     return (
-        <div>
+        <div className='py-15 pb-24'>
             <Heading>Frequently Asked Questions</Heading>
             <ComponentLayout>
                 <div className="flex flex-col gap-4">

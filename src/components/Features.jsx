@@ -46,44 +46,47 @@ const Features = () => {
     const selectedFeature = featuresData.find(feature => feature.id === selectedTab);
 
     return (
-        <div id='features' className='py-15'>
+        <div id='features' className='py-15 pb-24'>
             <Heading>Effective Features for Better Sales</Heading>
             <ComponentLayout>
                 {/* Layout for small devices (accordion style) */}
                 <div className="md:hidden w-full">
-                    <div className="flex flex-col gap-3"> {/* Reduced gap for tighter accordion look */}
+                    <div className="flex flex-col gap-3">
                         {featuresData.map((feature) => (
-                            <div key={feature.id} className="w-full rounded-lg overflow-hidden shadow-sm">
-                                <button
-                                    onClick={() => setSelectedTab(feature.id)}
-                                    className={`w-full p-4 text-left font-semibold transition-colors duration-300 flex justify-between items-center
+                            <>
+                                <div key={feature.id} className="w-full rounded-lg overflow-hidden shadow-sm">
+                                    <button
+                                        onClick={() => setSelectedTab(feature.id)}
+                                        className={`w-full p-4 text-left font-semibold transition-colors duration-300 flex justify-between items-center
                                                 ${selectedTab === feature.id
-                                            ? 'tryBtn text-white'
-                                            : 'bg-background/70' // Changed text color for non-active
-                                        }`}
-                                >
-                                    {feature.title}
-                                    <span className={`transform transition-transform duration-300 ${selectedTab === feature.id ? 'rotate-180' : 'rotate-0'}`}>
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                                        </svg>
-                                    </span>
-                                </button>
+                                                ? 'tryBtn text-white'
+                                                : 'bg-background/50'
+                                            }`}
+                                    >
+                                        {feature.title}
+                                        <span className={`transform transition-transform duration-300 ${selectedTab === feature.id ? 'rotate-180' : 'rotate-0'}`}>
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
                                 <div
-                                    className={`overflow-hidden transition-all duration-500 ease-in-out bg-background/70
+                                    className={`rounded-4xl overflow-hidden shadow-md transition-all duration-500 ease-in-out bg-background/50
                                                 ${selectedTab === feature.id ? 'max-h-[1000px] opacity-100 visible' : 'max-h-0 opacity-0 invisible'}`}
                                 >
-                                    <div className="p-4 border-t border-gray-200"> {/* Added border-t for separation */}
+                                    <div>
                                         <img
                                             src={feature.image}
                                             alt={feature.title}
-                                            className="w-full h-auto max-h-56 object-contain mb-4 rounded" // Adjusted max-h
+                                            className="w-full h-auto object-contain mb-4 rounded"
                                         />
-                                        <h3 className="text-lg font-semibold mb-2 text-gray-800">{feature.title}</h3>
-                                        <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
+                                        <div className='px-6 py-4'>
+                                            <p className="leading-relaxed !text-base">{feature.description}</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </>
                         ))}
                     </div>
                 </div>
@@ -98,16 +101,16 @@ const Features = () => {
                                 className={`w-full p-4 rounded-xl text-left transition-colors duration-300 font-semibold cursor-pointer overflow-hidden
                                             ${selectedTab === feature.id
                                         ? 'tryBtn text-white shadow-sm'
-                                        : 'bg-background/70'
+                                        : 'bg-background/50'
                                     }`}
                             >
                                 {feature.title}
                             </button>
                         ))}
                     </div>
-                    <div className="flex-1 md:w-2/3 lg:w-3/4 rounded-4xl overflow-hidden shadow-md">
+                    <div className="flex-1 md:w-2/3 lg:w-3/4 rounded-4xl overflow-hidden shadow-md bg-background/50">
                         {selectedFeature && (
-                            <div className="bg-background/50 min-h-[400px]">
+                            <div>
                                 <img
                                     src={selectedFeature.image}
                                     alt={selectedFeature.title}

@@ -42,8 +42,8 @@ const featuresData = [
 ];
 
 const Features = () => {
-    const [selectedTab, setSelectedTab] = useState(featuresData[0].id);
-    const selectedFeature = featuresData.find(feature => feature.id === selectedTab);
+    const [selectedTab, setSelectedTab] = useState(featuresData?.[0].id);
+    const selectedFeature = featuresData?.find(feature => feature?.id === selectedTab);
 
     return (
         <div id='features' className='py-15 pb-24'>
@@ -52,19 +52,19 @@ const Features = () => {
                 {/* Layout for small devices (accordion style) */}
                 <div className="md:hidden w-full">
                     <div className="flex flex-col gap-3">
-                        {featuresData.map((feature) => (
+                        {featuresData?.map((feature) => (
                             <>
-                                <div key={feature.id} className="w-full rounded-lg overflow-hidden shadow-sm">
+                                <div key={feature?.id} className="w-full rounded-lg overflow-hidden shadow-sm">
                                     <button
-                                        onClick={() => setSelectedTab(feature.id)}
+                                        onClick={() => setSelectedTab(feature?.id)}
                                         className={`w-full p-4 text-left font-semibold transition-colors duration-300 flex justify-between items-center
-                                                ${selectedTab === feature.id
+                                                ${selectedTab === feature?.id
                                                 ? 'tryBtn text-white'
                                                 : 'bg-background/50'
                                             }`}
                                     >
-                                        {feature.title}
-                                        <span className={`transform transition-transform duration-300 ${selectedTab === feature.id ? 'rotate-180' : 'rotate-0'}`}>
+                                        {feature?.title}
+                                        <span className={`transform transition-transform duration-300 ${selectedTab === feature?.id ? 'rotate-180' : 'rotate-0'}`}>
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
                                                 <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                                             </svg>
@@ -73,16 +73,16 @@ const Features = () => {
                                 </div>
                                 <div
                                     className={`rounded-4xl overflow-hidden shadow-md transition-all duration-500 ease-in-out bg-background/50
-                                                ${selectedTab === feature.id ? 'max-h-[1000px] opacity-100 visible' : 'max-h-0 opacity-0 invisible'}`}
+                                                ${selectedTab === feature?.id ? 'max-h-[1000px] opacity-100 visible' : 'max-h-0 opacity-0 invisible'}`}
                                 >
                                     <div>
                                         <img
-                                            src={feature.image}
-                                            alt={feature.title}
-                                            className="w-full h-auto object-contain mb-4 rounded"
+                                            src={selectedFeature?.image}
+                                            alt={selectedFeature?.title}
+                                            className="w-full object-contain"
                                         />
                                         <div className='px-6 py-4'>
-                                            <p className="leading-relaxed !text-base">{feature.description}</p>
+                                            <p className="leading-relaxed !text-base">{feature?.description}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -96,31 +96,29 @@ const Features = () => {
                     <div className="flex flex-col gap-4 md:w-1/3 lg:w-1/4">
                         {featuresData.map((feature) => (
                             <button
-                                key={feature.id}
-                                onClick={() => setSelectedTab(feature.id)}
+                                key={feature?.id}
+                                onClick={() => setSelectedTab(feature?.id)}
                                 className={`w-full p-4 rounded-xl text-left transition-colors duration-300 font-semibold cursor-pointer overflow-hidden
-                                            ${selectedTab === feature.id
+                                            ${selectedTab === feature?.id
                                         ? 'tryBtn text-white shadow-sm'
                                         : 'bg-background/50'
                                     }`}
                             >
-                                {feature.title}
+                                {feature?.title}
                             </button>
                         ))}
                     </div>
                     <div className="flex-1 md:w-2/3 lg:w-3/4 rounded-4xl overflow-hidden shadow-md bg-background/50">
-                        {selectedFeature && (
-                            <div>
-                                <img
-                                    src={selectedFeature.image}
-                                    alt={selectedFeature.title}
-                                    className="w-full object-contain"
-                                />
-                                <div className='px-6 py-4'>
-                                    <p className="leading-relaxed !text-base">{selectedFeature.description}</p>
-                                </div>
+                        <div>
+                            <img
+                                src={selectedFeature?.image}
+                                alt={selectedFeature?.title}
+                                className="w-full object-contain"
+                            />
+                            <div className='px-6 py-4'>
+                                <p className="leading-relaxed !text-base">{selectedFeature?.description}</p>
                             </div>
-                        )}
+                        </div>
                     </div>
                 </div>
             </ComponentLayout>

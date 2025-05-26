@@ -6,7 +6,7 @@ const Pricing = () => {
         <div>
             <Heading subHeading="Choose the plan that best fits your business needs">Simple, transparent pricing</Heading>
             <div className='max-w-6xl mx-auto px-4'>
-                <div className='grid grid-cols-3 gap-6 mt-10'>
+                <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6 mt-10'>
                     {/* <PackageCard
                         title="Free version"
                         price="0"

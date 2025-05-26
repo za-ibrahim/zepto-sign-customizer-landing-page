@@ -20,7 +20,7 @@ const faqData = [
 const FAQItem = ({ question, answer, open, onClick, idx }) => (
     <div className="bg-background shadow-lg rounded-2xl overflow-hidden transition-all duration-400 ease-in-out w-full">
         <button
-            className={`flex flex-row w-full justify-between items-center text-left border-none p-8 text-lg font-medium cursor-pointer outline-none transition-colors duration-200`}
+            className={`flex flex-row w-full justify-between items-center text-left p-8 text-lg font-medium cursor-pointer`}
             onClick={onClick}
             aria-expanded={open}
             aria-controls={`faq-answer-${idx}`}
@@ -58,19 +58,21 @@ const FAQ = () => {
     }
 
     return (
-        <div className="max-w-5xl mx-auto">
+        <div>
             <Heading>Frequently Asked Questions</Heading>
-            <div className="flex flex-col gap-4">
-                {faqData.map((item, idx) => (
-                    <FAQItem
-                        key={idx}
-                        idx={idx}
-                        question={item.question}
-                        answer={item.answer}
-                        open={openIndex === idx}
-                        onClick={() => toggleIndex(idx)}
-                    />
-                ))}
+            <div className='max-w-6xl mx-auto px-4'>
+                <div className="flex flex-col gap-4">
+                    {faqData.map((item, idx) => (
+                        <FAQItem
+                            key={idx}
+                            idx={idx}
+                            question={item.question}
+                            answer={item.answer}
+                            open={openIndex === idx}
+                            onClick={() => toggleIndex(idx)}
+                        />
+                    ))}
+                </div>
             </div>
         </div>
     )

@@ -9,13 +9,13 @@ const LinkComponent = ({ href, children }) => {
 const NavBar = () => {
     return (
         <div className="p-4 fixed w-[calc(100%-20px)] top-[10px] left-1/2 transform -translate-x-1/2 z-50 backdrop-blur-md bg-background/50 shadow-md rounded-lg">
-            <div className="grid grid-cols-3">
+            <div className="grid grid-cols-4">
                 <div className="flex items-center justify-between">
                     <img src={logo} alt="logo" className="w-8 h-8" />
                     {/* <h1 className="text-xl font-extrabold text-primary">Zepto Sign Customizer</h1> */}
                 </div>
                 {/* Nav menu with dropdown if needed and responsive */}
-                <nav className="hidden md:flex gap-6 justify-center">
+                <nav className="hidden md:flex col-span-2 gap-5 justify-center">
                     <LinkComponent href="/">Home</LinkComponent>
                     <LinkComponent href="#features">Features</LinkComponent>
                     <LinkComponent href="#pricing">Pricing</LinkComponent>

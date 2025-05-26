@@ -19,7 +19,7 @@ const faqData = [
 
 // FAQItem subcomponent for reusability
 const FAQItem = ({ question, answer, open, onClick, idx }) => (
-    <div className="bg-background shadow-lg rounded-2xl overflow-hidden transition-all duration-400 ease-in-out w-full">
+    <div className="bg-background shadow-md rounded-2xl overflow-hidden transition-all duration-400 ease-in-out w-full">
         <button
             className={`flex flex-row w-full justify-between items-center text-left p-8 text-lg font-medium cursor-pointer`}
             onClick={onClick}

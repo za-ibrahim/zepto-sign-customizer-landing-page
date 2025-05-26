@@ -1,6 +1,7 @@
 import './App.css'
 import Commitment from './components/Commitment'
 import FAQ from './components/FAQ'
+import Features from './components/Features'
 import Hero from './components/Hero'
 import NavBar from './components/NavBar'
 import Pricing from './components/Pricing'
@@ -18,6 +19,7 @@ function App() {
       <div className='pt-[95px]' />
       <Hero />
       <Commitment />
+      <Features />
       <Pricing />
       <FAQ />
     </main>

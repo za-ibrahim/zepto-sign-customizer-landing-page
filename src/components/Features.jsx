@@ -1,0 +1,130 @@
+import { useState } from 'react';
+import ComponentLayout from '../layouts/ComponentLayout'
+import Heading from './Heading'
+
+const featuresData = [
+    {
+        id: 1,
+        title: 'Unlimited Product Customization',
+        description: 'Go beyond limits with endless customization, offering personalization as unique as your vision.',
+        image: '/assets/Customization.svg', // Assuming you have this image in public/assets
+    },
+    {
+        id: 2,
+        title: 'Various Option Types',
+        description: 'Provide Options with Detail: Text, Color, Images, Uploads, & More at Your Command.',
+        image: '/assets/No-Code.svg', // Assuming you have this image in public/assets
+    },
+    {
+        id: 3,
+        title: 'Real Time Preview',
+        description: 'Let your customers instantly see their personalized products with our live preview.',
+        image: '/assets/Theme.svg', // Assuming you have this image in public/assets
+    },
+    {
+        id: 4,
+        title: 'Conditional Logic',
+        description: 'Use Conditions to narrow customer requirements and deliver the best experience.',
+        image: '/assets/Theme.svg', // Assuming you have this image in public/assets
+    },
+    {
+        id: 5,
+        title: 'Dynamic Pricing',
+        description: 'Adjust prices dynamically per personalization and display the price update real-time.',
+        image: '/assets/Theme.svg', // Assuming you have this image in public/assets
+    },
+    {
+        id: 6,
+        title: 'Clean and Responsive',
+        description: 'Use different styles to keep your store sleek and functional on any device.',
+        image: '/assets/Theme.svg', // Assuming you have this image in public/assets
+    },
+];
+
+const Features = () => {
+    const [selectedTab, setSelectedTab] = useState(featuresData[0].id);
+    const selectedFeature = featuresData.find(feature => feature.id === selectedTab);
+
+    return (
+        <div id='features' className='py-15'>
+            <Heading>Effective Features for Better Sales</Heading>
+            <ComponentLayout>
+                {/* Layout for small devices (accordion style) */}
+                <div className="md:hidden w-full">
+                    <div className="flex flex-col gap-3"> {/* Reduced gap for tighter accordion look */}
+                        {featuresData.map((feature) => (
+                            <div key={feature.id} className="w-full border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+                                <button
+                                    onClick={() => setSelectedTab(feature.id)}
+                                    className={`w-full p-4 text-left font-semibold transition-colors duration-300 flex justify-between items-center
+                                                ${selectedTab === feature.id
+                                            ? 'bg-blue-600 text-white'
+                                            : 'bg-gray-50 hover:bg-gray-100 text-blue-600' // Changed text color for non-active
+                                        }`}
+                                >
+                                    {feature.title}
+                                    <span className={`transform transition-transform duration-300 ${selectedTab === feature.id ? 'rotate-180' : 'rotate-0'}`}>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div
+                                    className={`overflow-hidden transition-all duration-500 ease-in-out bg-white
+                                                ${selectedTab === feature.id ? 'max-h-[1000px] opacity-100 visible' : 'max-h-0 opacity-0 invisible'}`}
+                                >
+                                    <div className="p-4 border-t border-gray-200"> {/* Added border-t for separation */}
+                                        <img
+                                            src={feature.image}
+                                            alt={feature.title}
+                                            className="w-full h-auto max-h-56 object-contain mb-4 rounded" // Adjusted max-h
+                                        />
+                                        <h3 className="text-lg font-semibold mb-2 text-gray-800">{feature.title}</h3>
+                                        <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Layout for medium and larger devices (enhanced original tab style) */}
+                <div className="hidden md:flex flex-row-reverse gap-8 items-start">
+                    {/* Tabs on the right (due to flex-row-reverse) */}
+                    <div className="flex flex-col gap-4 md:w-1/3 lg:w-1/4 sticky top-24"> {/* Adjusted sticky top */}
+                        {featuresData.map((feature) => (
+                            <button
+                                key={feature.id}
+                                onClick={() => setSelectedTab(feature.id)}
+                                className={`w-full p-4 rounded-xl text-left transition-colors duration-300 font-semibold cursor-pointer overflow-hidden
+                                            ${selectedTab === feature.id
+                                        ? 'tryBtn text-white shadow-sm'
+                                        : 'bg-background/70 backdrop-blur-lg'
+                                    }`}
+                            >
+                                {feature.title}
+                            </button>
+                        ))}
+                    </div>
+
+                    {/* Content on the left (due to flex-row-reverse) */}
+                    <div className="flex-1 md:w-2/3 lg:w-3/4">
+                        {selectedFeature && (
+                            <div className="p-6 bg-background/50 rounded-xl shadow-md min-h-[400px]"> {/* Adjusted min-h */}
+                                <img
+                                    src={selectedFeature.image}
+                                    alt={selectedFeature.title}
+                                    className="w-full h-72 object-contain mb-6 rounded-md" // Kept h-72
+                                />
+                                <h3 className="text-3xl font-bold mb-4 text-gray-800">{selectedFeature.title}</h3> {/* Larger title */}
+                                <p className="text-gray-700 leading-relaxed text-base">{selectedFeature.description}</p> {/* Base text size */}
+                            </div>
+                        )}
+                    </div>
+                </div>
+            </ComponentLayout>
+        </div>
+    );
+}
+
+export default Features

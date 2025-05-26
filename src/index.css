@@ -2,9 +2,9 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #fc91f9;
-  --color-secondary: #df2b8e;
-  --color-accent: #c4105f;
+  --color-primary: #908fff;
+  --color-secondary: #c3c2fe;
+  --color-accent: #9d9bed;
   --color-background: #fff;
   --color-text: #333333;
   --font-hero: "Parkinsans", sans-serif;

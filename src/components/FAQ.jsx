@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Heading from './Heading'
+import ComponentLayout from '../layouts/ComponentLayout'
 
 const faqData = [
     {
@@ -60,7 +61,7 @@ const FAQ = () => {
     return (
         <div>
             <Heading>Frequently Asked Questions</Heading>
-            <div className='max-w-6xl mx-auto px-4'>
+            <ComponentLayout>
                 <div className="flex flex-col gap-4">
                     {faqData.map((item, idx) => (
                         <FAQItem
@@ -73,7 +74,7 @@ const FAQ = () => {
                         />
                     ))}
                 </div>
-            </div>
+            </ComponentLayout>
         </div>
     )
 }

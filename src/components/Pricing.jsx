@@ -1,12 +1,13 @@
 import React from 'react'
 import Heading from './Heading'
+import ComponentLayout from '../layouts/ComponentLayout'
 
 const Pricing = () => {
     return (
         <div>
             <Heading subHeading="Choose the plan that best fits your business needs">Simple, transparent pricing</Heading>
-            <div className='max-w-6xl mx-auto px-4'>
-                <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6 mt-10'>
+            <ComponentLayout>
+                <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6'>
                     {/* <PackageCard
                         title="Free version"
                         price="0"
@@ -68,7 +69,7 @@ const Pricing = () => {
                         ]}
                     />
                 </div>
-            </div>
+            </ComponentLayout>
         </div>
     )
 }

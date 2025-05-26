@@ -1,4 +1,5 @@
 import './App.css'
+import Commitment from './components/Commitment'
 import FAQ from './components/FAQ'
 import Hero from './components/Hero'
 import NavBar from './components/NavBar'
@@ -16,6 +17,7 @@ function App() {
       <NavBar />
       <div className='pt-[95px]' />
       <Hero />
+      <Commitment />
       <Pricing />
       <FAQ />
     </main>

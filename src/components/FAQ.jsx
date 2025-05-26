@@ -18,9 +18,9 @@ const faqData = [
 
 // FAQItem subcomponent for reusability
 const FAQItem = ({ question, answer, open, onClick, idx }) => (
-    <div className="faq-item">
+    <div className="bg-background rounded-2xl overflow-hidden transition-all duration-400 ease-in-out w-full">
         <button
-            className={`flex flex-row justify-between items-center w-full text-left bg-background border-none p-4 text-lg font-medium cursor-pointer outline-none transition-colors duration-200 rounded-lg ${open ? 'rounded-b-none' : ''}`}
+            className={`flex flex-row w-full justify-between items-center text-left border-none p-8 text-lg font-medium cursor-pointer outline-none transition-colors duration-200`}
             onClick={onClick}
             aria-expanded={open}
             aria-controls={`faq-answer-${idx}`}
@@ -43,11 +43,9 @@ const FAQItem = ({ question, answer, open, onClick, idx }) => (
         </button>
         <div
             id={`faq-answer-${idx}`}
-            className={`faq-answer border-t bg-background rounded-b-lg overflow-hidden transition-all duration-400 ease-in-out ${open ? 'max-h-40 opacity-100 p-4 mb-4' : 'max-h-0 opacity-0 p-0 mb-0'
-                }`}
-            style={{}}
+            className={`faq-answer border-t border-primary bg-background  overflow-hidden transition-all duration-400 ease-in-out px-8 ${open ? 'max-h-40 opacity-100 py-8' : 'py-0 max-h-0 opacity-0'}`}
         >
-            <span className={`${open ? 'block' : 'hidden'}`}>{answer}</span>
+            <span>{answer}</span>
         </div>
     </div>
 )

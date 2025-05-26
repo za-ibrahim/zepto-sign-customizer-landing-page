@@ -3,8 +3,11 @@ import Heading from './Heading'
 
 const Hero = () => {
     return (
-        <div>
-            <Heading subHeading="The ultimate professional apps for selling custom signs, neon signs, lettering and banners on your online store.">Simplify Custom Sign Quotes <br />Win More Sales</Heading>
+        <div className='h-[calc(100vh-6rem)]'>
+            <Heading>Simplify Custom Sign Quotes <br />Win More Sales</Heading>
+            <div>
+                <img className='mx-auto' src="./assets/hero.png" alt="" />
+            </div>
         </div>
     )
 }

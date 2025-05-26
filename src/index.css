@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -18,4 +18,64 @@ body {
 
 p {
   font-size: 1.125rem;
+}
+
+.tryBtn {
+  position: relative;
+  color: white;
+  /* background: linear-gradient(
+    270deg,
+    var(--color-primary),
+    var(--color-secondary),
+    var(--color-accent),
+    var(--color-primary),
+    var(--color-secondary),
+    var(--color-accent),
+    var(--color-primary)
+  );
+  background-size: 600% 600%;
+  filter: blur(0.5px); */
+  border: none;
+  z-index: 1;
+  /* background: #fff; */
+  overflow: hidden;
+}
+.tryBtn::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  z-index: -1;
+  border-radius: 8px;
+  padding: 0;
+  background: linear-gradient(
+    205deg,
+    var(--color-primary),
+    var(--color-secondary),
+    var(--color-accent),
+    var(--color-primary),
+    var(--color-secondary),
+    var(--color-accent),
+    var(--color-primary)
+  );
+  background-size: 600% 600%;
+  filter: blur(0.5px);
+  transition: opacity 0.2s;
+  opacity: 1;
+  animation: border-gradient-animate 3s linear alternate-reverse infinite;
+}
+/* .tryBtn:hover::before {
+  opacity: 1;
+  animation: border-gradient-animate 3s linear infinite;
+} */
+.tryBtn > * {
+  position: relative;
+  z-index: 1;
+}
+@keyframes border-gradient-animate {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import logo from "../assets/logo.avif";
 
 const LinkComponent = ({ href, children }) => {
@@ -7,12 +8,18 @@ const LinkComponent = ({ href, children }) => {
 }
 
 const NavBar = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    }
+
     return (
-        <div className="p-4 fixed w-[calc(100%-20px)] top-[10px] left-1/2 transform -translate-x-1/2 z-50 backdrop-blur-md bg-background/50 shadow-md rounded-lg">
+        <div className="p-4 fixed w-[calc(100%-20px)] top-[10px] left-1/2 transform -translate-x-1/2 z-50 backdrop-blur-md bg-background/80 shadow-md rounded-lg">
             <div className="grid lg:grid-cols-4 grid-cols-2">
                 <div className="flex items-center gap-3">
                     <img src={logo} alt="logo" className="w-8 h-8" />
-                    <h1 className="text-xl font-extrabold text-primary">Zepto Sign Customizer</h1>
+                    {/* <h1 className="text-xl font-extrabold text-primary">Zepto Sign Customizer</h1> */}
                 </div>
                 {/* Nav menu with dropdown if needed and responsive */}
                 <nav className="hidden lg:flex col-span-2 gap-5 justify-center">
@@ -31,17 +38,27 @@ const NavBar = () => {
                         </div>
                     </div> */}
                 </nav>
-                <div className="flex items-center justify-end">
+                <div className="flex items-center justify-end gap-2">
                     {/* Extra two buttons for Demo & Try for free */}
                     <div className="flex gap-2 text-md">
                         {/* <a href="#demo" className="px-4 py-2 rounded-full border border-primary text-text font-semibold hover:text-primary transition">Demo</a> */}
-                        <a href="#try" className="px-4 py-2 rounded-full text-white bg-gradient-to-r to-accent from-primary hover:scale-[1.04] font-semibold transition">Try for Free</a>
+                        <a href="#" className="tryBtn px-4 py-2 rounded-full font-semibold">Try for Free</a>
                     </div>
                     {/* Hamburger for mobile */}
-                    <div className="md:hidden w-6 h-6">
-                        <button className="text-primary focus:outline-none cursor-pointer">
-                            <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
-                        </button>
+                    <div className="w-10 lg:hidden">
+                        <div className="w-6 h-6 mx-auto">
+                            <button className="text-primary focus:outline-none cursor-pointer" onClick={toggleMenu}>
+                                {isOpen ? (
+                                    <svg className="w-6 h-6 transition-transform duration-300 ease-in-out transform rotate-180" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                ) : (
+                                    <svg className="w-6 h-6 transition-transform duration-300 ease-in-out" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                                    </svg>
+                                )}
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>

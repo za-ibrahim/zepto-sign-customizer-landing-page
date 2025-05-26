@@ -35,7 +35,7 @@ const Commitment = () => {
 
 const CompCard = ({ title, description, icon }) => {
     return (
-        <div className='bg-background p-6 rounded-2xl flex lg:flex-row flex-col justify-between items-start gap-6'>
+        <div className='bg-background border border-primary/20 p-6 rounded-2xl flex lg:flex-row flex-col justify-between items-start gap-6'>
             <div className='w-[85px] h-[85px] shrink-0 md:ml-0 mx-auto flex items-center justify-center bg-primary/20 rounded-full'>
                 <img className='w-10 h-10 p-0 m-0' src={icon} alt={title} />
             </div>

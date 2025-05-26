@@ -1,17 +1,17 @@
 import { useState } from "react";
 import logo from "../assets/logo.avif";
 
+export const LinkComponent = ({ href, className, children }) => {
+    return (
+        <a href={href} className={`self-center text-md font-semibold text-text hover:text-primary ${className}`}>{children}</a>
+    )
+}
+
 const NavBar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
-    }
-
-    const LinkComponent = ({ href, children }) => {
-        return (
-            <a href={href} className="self-center text-md font-semibold text-text hover:text-primary">{children}</a>
-        )
     }
 
     return (

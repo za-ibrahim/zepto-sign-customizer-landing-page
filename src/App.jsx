@@ -1,4 +1,5 @@
 import './App.css'
+import FAQ from './components/FAQ'
 import Hero from './components/Hero'
 import NavBar from './components/NavBar'
 import Pricing from './components/Pricing'
@@ -16,6 +17,7 @@ function App() {
       <div className='pt-[95px]' />
       <Hero />
       <Pricing />
+      <FAQ />
     </main>
   )
 }

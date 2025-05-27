@@ -5,25 +5,25 @@ import Heading from './Heading'
 const featuresData = [
     {
         id: 1,
-        title: 'Unlimited Product Customization',
+        title: 'Stunningly Realistic Previews',
         description: 'Go beyond limits with endless customization, offering personalization as unique as your vision.',
         image: './assets/01.png',
     },
     {
         id: 2,
-        title: 'Various Option Types',
+        title: 'Worldwide Accessibility',
         description: 'Provide Options with Detail: Text, Color, Images, Uploads, & More at Your Command.',
         image: './assets/02.png',
     },
     {
         id: 3,
-        title: 'Real Time Preview',
+        title: 'Fully Customizable Signage',
         description: 'Let your customers instantly see their personalized products with our live preview.',
         image: './assets/03.png',
     },
     {
         id: 4,
-        title: 'Conditional Logic',
+        title: 'Personalized Font Selection',
         description: 'Use Conditions to narrow customer requirements and deliver the best experience.',
         image: './assets/04.png',
     },
@@ -35,9 +35,15 @@ const featuresData = [
     },
     {
         id: 6,
-        title: 'Clean and Responsive',
+        title: 'Bold, Vibrant Color Options',
         description: 'Use different styles to keep your store sleek and functional on any device.',
         image: './assets/06.png',
+    },
+    {
+        id: 7,
+        title: 'All-Inclusive Signage Solutions',
+        description: 'Use different styles to keep your store sleek and functional on any device.',
+        image: './assets/07.png',
     },
 ];
 

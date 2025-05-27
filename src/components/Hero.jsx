@@ -42,7 +42,7 @@ const Hero = () => {
                         </span>
                     </Heading>
                     <p className='text-base lg:text-lg text-center lg:text-left text-text/60 max-w-xl'>
-                        Empower your customers with personalized products featuring live previews, unlimited options, and dynamic pricing adjustments. Our intuitive tool makes customization effortless, enhancing user experience and boosting sales.
+                        Empower customers to create custom signs with live previews, complete design control, precise sizing, volumetric weight calculation, and full multi-language and currency support.
                     </p>
                     <div className='flex flex-row gap-4 pt-2'>
                         <button className='tryBtn group shadow-lg bg-[#00ffff] hover:bg-[#00cccc] text-black px-6 py-3 text-base font-semibold rounded-full flex items-center gap-2 transition-all duration-300'>
@@ -64,7 +64,7 @@ const Hero = () => {
                 <div className='relative hidden lg:block' ref={imageRef}>
                     <div className="absolute -inset-1 bg-gradient-to-r from-background to-primary rounded-3xl blur-2xl opacity-40 animate-pulse"></div>
                     <div className='relative rounded-3xl overflow-hidden ' ref={cardRef}>
-                        <img className='w-[700px] object-contain' src="./assets/hero_2.png" alt="Neon Customizer Preview" />
+                        <img className='w-[700px] object-contain' src="./assets/hero.png" alt="Neon Customizer Preview" />
                     </div>
                 </div>
 

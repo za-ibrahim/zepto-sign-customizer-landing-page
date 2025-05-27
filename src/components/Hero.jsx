@@ -37,11 +37,11 @@ const Hero = () => {
                     ref={textRef}
                 >
                     <Heading className="!px-0 !py-0 lg:!text-left lg:!items-start !w-full">
-                        <span className='text-5xl lg:text-6xl leading-tight font-bold bg-clip-text text-transparent bg-gradient-to-r from-accent via-secondary to-primary'>
+                        <span className='text-5xl lg:text-6xl leading-tight font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary'>
                             Simplify Custom Sign Quotes <br className='lg:block hidden' />Win More Sales
                         </span>
                     </Heading>
-                    <p className='text-base lg:text-lg text-center lg:text-left text-text/50 max-w-xl'>
+                    <p className='text-base lg:text-lg text-center lg:text-left text-text/60 max-w-xl'>
                         Empower your customers with personalized products featuring live previews, unlimited options, and dynamic pricing adjustments. Our intuitive tool makes customization effortless, enhancing user experience and boosting sales.
                     </p>
                     <div className='flex flex-row gap-4 pt-2'>
@@ -51,7 +51,7 @@ const Hero = () => {
                                 <svg xmlns="http://www.w3.org/2000/svg" fill='black' width="18" height="18" viewBox="0 0 18 18"><path d="M5.47 3.53 10.94 9 5.469 14.471l1.06 1.06L13.061 9 6.531 2.47z" /></svg>
                             </span>
                         </button>
-                        <button className='group flex shadow-md justify-between items-center gap-2 border border-white/30 backdrop-blur-md bg-white/10 hover:bg-white/20 px-6 py-3 text-base text-white font-semibold rounded-full transition-all duration-300'>
+                        <button className='group flex shadow-md justify-between items-center gap-2 border border-background/40 backdrop-blur-md bg-background/20  px-6 py-3 text-base text-text/80 font-semibold rounded-full transition-all duration-300'>
                             <span>Live Demo</span>
                             <span className='group-hover:translate-x-1 transition-all duration-300'>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill='white' width="18" height="18" viewBox="0 0 18 18"><path d="M5.47 3.53 10.94 9 5.469 14.471l1.06 1.06L13.061 9 6.531 2.47z" /></svg>
@@ -63,8 +63,8 @@ const Hero = () => {
                 {/* Right Image Section */}
                 <div className='relative hidden lg:block' ref={imageRef}>
                     <div className="absolute -inset-1 bg-gradient-to-r from-background to-primary rounded-3xl blur-2xl opacity-40 animate-pulse"></div>
-                    <div className='relative rounded-3xl overflow-hidden shadow-xl backdrop-blur-lg bg-white/5 p-4 border border-white/10' ref={cardRef}>
-                        <img className='w-[500px] object-contain' src="./assets/hero_2.png" alt="Neon Customizer Preview" />
+                    <div className='relative rounded-3xl overflow-hidden ' ref={cardRef}>
+                        <img className='w-[700px] object-contain' src="./assets/hero_2.png" alt="Neon Customizer Preview" />
                     </div>
                 </div>
 

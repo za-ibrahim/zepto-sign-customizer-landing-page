@@ -83,9 +83,12 @@ const PackageCard = ({ title, price, features }) => {
             <button className='px-4 py-2 my-5 w-full bg-primary text-white rounded-full hover:bg-secondary transition'>Start free {price != 0 ? "7 day trail" : ""}</button>
             {/* <hr className='my-5' /> */}
             <div>
-                <ul className='list-disc list-inside mb-6'>
+                <ul className='list-none mb-6 flex flex-col gap-2'>
                     {features.map((feature, index) => (
-                        <li key={index}>{feature}</li>
+                        <li key={index} className='leading-relaxed flex items-center gap-2'>
+                            <span className="mr-2 text-blue-500 font-bold">✔</span>
+                            <span>{feature}</span>
+                        </li>
                     ))}
                 </ul>
             </div>

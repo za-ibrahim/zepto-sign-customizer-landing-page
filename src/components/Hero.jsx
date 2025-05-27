@@ -7,25 +7,25 @@ const Hero = () => {
     const cardRef = useRef();
     const imageRef = useRef();
 
-    useEffect(() => {
-        gsap.fromTo(
-            textRef.current,
-            { opacity: 0, y: 30 },
-            { opacity: 1, y: 0, duration: 1.2, ease: 'power3.out' }
-        );
+    // useEffect(() => {
+    //     gsap.fromTo(
+    //         textRef.current,
+    //         { opacity: 0, y: 30 },
+    //         { opacity: 1, y: 0, duration: 1.2, ease: 'power3.out' }
+    //     );
 
-        gsap.fromTo(
-            cardRef.current,
-            { opacity: 0, y: 30 },
-            { opacity: 1, y: 0, duration: 1.4, ease: 'power3.out', delay: 0.2 }
-        );
+    //     gsap.fromTo(
+    //         cardRef.current,
+    //         { opacity: 0, y: 30 },
+    //         { opacity: 1, y: 0, duration: 1.4, ease: 'power3.out', delay: 0.2 }
+    //     );
 
-        gsap.fromTo(
-            imageRef.current,
-            { opacity: 0, scale: 0.95 },
-            { opacity: 1, scale: 1, duration: 1.4, ease: 'power3.out', delay: 0.3 }
-        );
-    }, []);
+    //     gsap.fromTo(
+    //         imageRef.current,
+    //         { opacity: 0, scale: 0.95 },
+    //         { opacity: 1, scale: 1, duration: 1.4, ease: 'power3.out', delay: 0.3 }
+    //     );
+    // }, []);
 
     return (
         <div className='h-[calc(100vh-6rem)] px-4 flex items-center justify-center bg-gradient-to-b from-background/10 to-background/70 overflow-hidden relative'>

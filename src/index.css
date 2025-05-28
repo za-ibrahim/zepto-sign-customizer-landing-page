@@ -5,8 +5,8 @@
   --color-primary: #908fff;
   --color-secondary: #c8c8ff;
   --color-accent: #9d9bed;
-  --color-accent_2: #9d9bed;
-  --color-accent_3: #9d9bed;
+  --color-accent_2: #b3aaff; /* lighter, more vibrant version of accent */
+  --color-accent_3: #6c63ff; /* deeper, more saturated version of accent */
   --color-background: #fff;
   --color-text: #333333;
   --font-hero: "Parkinsans", sans-serif;
@@ -31,6 +31,7 @@ button {
 }
 
 .custom-shape {
+  position: relative;
   clip-path: polygon(
     0% 0%,
     100% 0%,
@@ -40,13 +41,18 @@ button {
     0% 100%,
     0% 0%
   );
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
 }
-
-.tryBtn {
-  position: relative;
-  color: white;
-  /* background: linear-gradient(
-    270deg,
+.custom-shape::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  z-index: -1;
+  padding: 0;
+  background: linear-gradient(
+    60deg,
     var(--color-primary),
     var(--color-secondary),
     var(--color-accent),
@@ -55,11 +61,26 @@ button {
     var(--color-accent),
     var(--color-primary)
   );
-  background-size: 600% 600%;
-  filter: blur(0.5px); */
+  background-size: 900% 900%;
+  filter: blur(150px);
+  box-shadow: 0 0 0px 0px var(--color-accent_2),
+    0 0 0px 0px var(--color-accent_3);
+  animation: gradient-animate 3s alternate-reverse infinite,
+    glow-pulse 1.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  transition: background-color 0.225s ease-in-out, box-shadow 0.225s ease-in-out,
+    transform 0.225s ease-in-out;
+}
+.pricing-card:hover .custom-shape {
+  transition: background-color 0.225s ease-in-out, box-shadow 0.225s ease-in-out,
+    transform 0.225s ease-in-out;
+  transform: translateY(-2px);
+}
+
+.tryBtn {
+  position: relative;
+  color: white;
   border: none;
   z-index: 1;
-  /* background: #fff; */
   overflow: hidden;
 }
 .tryBtn::before {
@@ -85,10 +106,6 @@ button {
   opacity: 1;
   animation: border-gradient-animate 3s linear alternate-reverse infinite;
 }
-/* .tryBtn:hover::before {
-  opacity: 1;
-  animation: border-gradient-animate 3s linear infinite;
-} */
 .tryBtn > * {
   position: relative;
   z-index: 1;
@@ -99,5 +116,24 @@ button {
   }
   100% {
     background-position: 100% 50%;
+  }
+}
+@keyframes gradient-animate {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+@keyframes glow-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0px 0px var(--color-accent_2),
+      0 0 0px 0px var(--color-accent_3);
+  }
+  50% {
+    box-shadow: 0 0 32px 12px var(--color-accent_2),
+      0 0 64px 24px var(--color-accent_3);
   }
 }

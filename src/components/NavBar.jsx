@@ -16,7 +16,7 @@ const NavBar = () => {
     }
 
     return (
-        <div className="p-4 fixed w-[calc(100%-20px)] top-[10px] left-1/2 transform -translate-x-1/2 z-50 backdrop-blur-md bg-background/80 shadow-md rounded-lg">
+        <div className="lg:px-4 py-4 fixed w-full lg:w-[calc(100%-20px)] lg:top-[10px] left-1/2 transform -translate-x-1/2 z-50 backdrop-blur-md bg-background/80 shadow-md lg:rounded-lg">
             <ComponentLayout>
                 <div className="grid lg:grid-cols-4 grid-flow-col-dense">
                     <div className="flex items-center gap-3">
@@ -66,7 +66,7 @@ const NavBar = () => {
                         </div>
                     </div>
                 </div>
-                <nav className={`lg:hidden overflow-hidden ease-in-out transition-all duration-300 ${isOpen ? 'max-h-svw h-[calc(100vh-90px)] text-xl pt-8' : 'text-[0px] h-0 p-0 m-0'}`}>
+                <nav className={`lg:hidden overflow-hidden ease-in-out transition-all duration-300 ${isOpen ? 'max-h-fit h-[calc(100vh-90px)] text-xl pt-8' : 'text-[0px] h-0 p-0 m-0'}`}>
                     <div className="flex flex-col items-center justify-evenly gap-6 overflow-x-auto h-full">
                         <LinkComponent href="/">Home</LinkComponent>
                         <LinkComponent href="#features">Features</LinkComponent>

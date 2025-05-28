@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import Heading from './Heading'
 import ComponentLayout from '../layouts/ComponentLayout'
 
-// gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
 const Pricing = () => {
     useEffect(() => {
@@ -21,7 +21,6 @@ const Pricing = () => {
                     start: 'top 55%',
                     end: 'to 30%',
                     scrub: 2,
-
                 },
             }
         );

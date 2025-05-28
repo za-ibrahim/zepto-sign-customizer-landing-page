@@ -65,8 +65,8 @@ button {
   );
   background-size: 900% 900%;
   filter: blur(150px);
-  animation: gradient-animate 3s alternate-reverse infinite,
-    glow-pulse 1.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation: gradient-animate 6s alternate-reverse infinite,
+    glow-pulse 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
   transition: background-color 0.225s ease-in-out, box-shadow 0.225s ease-in-out,
     transform 0.225s ease-in-out;
 }

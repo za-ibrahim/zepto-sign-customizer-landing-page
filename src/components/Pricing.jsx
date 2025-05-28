@@ -56,7 +56,7 @@ const Pricing = () => {
 
 const PackageCard = ({ title, price, features }) => {
     return (
-        <div className='pricing-card rounded-lg shadow-md border-none border-primary backdrop-blur-3xl bg-background/70'>
+        <div className='pricing-card rounded-lg shadow-md bg-background/70'>
             <div className='text-center custom-shape pt-5 pb-14'>
                 <h2 className='text-xl font-bold mb-4'>{title}</h2>
                 <span className='!text-4xl font-semibold block'>${price}</span>

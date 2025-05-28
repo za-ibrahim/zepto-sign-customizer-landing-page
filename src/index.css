@@ -54,17 +54,17 @@ button {
   background: linear-gradient(
     60deg,
     var(--color-primary),
-    var(--color-secondary),
     var(--color-accent),
+    var(--color-accent_2),
+    var(--color-accent_3),
     var(--color-primary),
-    var(--color-secondary),
     var(--color-accent),
+    var(--color-accent_2),
+    var(--color-accent_3),
     var(--color-primary)
   );
   background-size: 900% 900%;
   filter: blur(150px);
-  box-shadow: 0 0 0px 0px var(--color-accent_2),
-    0 0 0px 0px var(--color-accent_3);
   animation: gradient-animate 3s alternate-reverse infinite,
     glow-pulse 1.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
   transition: background-color 0.225s ease-in-out, box-shadow 0.225s ease-in-out,

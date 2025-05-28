@@ -26,6 +26,22 @@ p {
   font-size: 1.125rem;
 }
 
+button {
+  cursor: pointer;
+}
+
+.custom-shape {
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 100%,
+    75% 80%,
+    25% 80%,
+    0% 100%,
+    0% 0%
+  );
+}
+
 .tryBtn {
   position: relative;
   color: white;

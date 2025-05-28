@@ -56,18 +56,18 @@ const Pricing = () => {
 
 const PackageCard = ({ title, price, features }) => {
     return (
-        <div className='p-6 rounded-lg shadow-md border-none border-primary backdrop-blur-3xl bg-background/50'>
-            <div className='text-center'>
+        <div className='rounded-lg shadow-md border-none border-primary backdrop-blur-3xl bg-background/70'>
+            <div className='text-center custom-shape bg-primary/80 backdrop-blur-xl pt-5 pb-14'>
                 <h2 className='text-xl font-bold mb-4'>{title}</h2>
                 <span className='!text-4xl font-semibold block'>${price}</span>
             </div>
-            <button className='px-4 py-2 my-5 w-full bg-primary text-white rounded-full hover:bg-secondary transition'>Start free {price != 0 ? "7 day trail" : ""}</button>
+            {/* <button className='px-4 py-2 my-5 w-full bg-primary text-white rounded-full hover:bg-secondary transition'>Start free {price != 0 ? "7 day trail" : ""}</button> */}
             {/* <hr className='my-5' /> */}
-            <div>
-                <ul className='list-none mb-6 flex flex-col gap-2'>
+            <div className='p-6'>
+                <ul className='list-none flex flex-col gap-2'>
                     {features.map((feature, index) => (
-                        <li key={index} className='leading-relaxed flex items-center gap-2'>
-                            <span className="mr-2 text-blue-500 font-bold">✔</span>
+                        <li key={index} className='leading-relaxed flex items-center justify-center gap-2'>
+                            {/* <span className="mr-2 text-blue-500 font-bold">✔</span> */}
                             <span>{feature}</span>
                         </li>
                     ))}

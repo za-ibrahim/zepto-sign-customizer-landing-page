@@ -78,7 +78,7 @@ const Features = () => {
                                     </button>
                                 </div>
                                 <div
-                                    className={`rounded-4xl overflow-hidden shadow-md transition-all duration-500 ease-in-out bg-background/50
+                                    className={`rounded-xl overflow-hidden shadow-md transition-all duration-500 ease-in-out bg-background/50
                                                 ${selectedTab === feature?.id ? 'max-h-[1000px] opacity-100 visible' : 'max-h-0 opacity-0 invisible'}`}
                                 >
                                     <div>
@@ -87,7 +87,7 @@ const Features = () => {
                                             alt={selectedFeature?.title}
                                             className="w-full object-contain"
                                         />
-                                        <div className='px-6 py-4'>
+                                        <div className='px-6 py-4 text-center'>
                                             <p className="leading-relaxed !text-base">{feature?.description}</p>
                                         </div>
                                     </div>
@@ -114,7 +114,7 @@ const Features = () => {
                             </button>
                         ))}
                     </div>
-                    <div className="flex-1 md:w-2/3 lg:w-3/4 rounded-4xl overflow-hidden shadow-md bg-background/50">
+                    <div className="flex-1 md:w-2/3 lg:w-3/4 rounded-xl overflow-hidden shadow-md bg-background/50">
                         <div>
                             <img
                                 src={selectedFeature?.image}

@@ -20,7 +20,6 @@ const Pricing = () => {
                     scroller: "body",
                     start: 'top 55%',
                     end: 'to 30%',
-                    markers: true,
                     scrub: 2,
 
                 },

@@ -1,32 +1,20 @@
-import React, { useEffect, useRef } from 'react';
-import gsap from 'gsap';
+import { useEffect } from 'react';
 import Heading from './Heading';
 import ComponentLayout from '../layouts/ComponentLayout';
 
 const Hero = () => {
-    const textRef = useRef();
-    const cardRef = useRef();
-    const imageRef = useRef();
+    useEffect(() => {
+        gsap.fromTo("#heroText",
+            { opacity: 0, y: 30 },
+            { opacity: 1, y: 0, duration: 0.8, delay: 0.5, ease: 'power3.out' }
+        );
 
-    // useEffect(() => {
-    //     gsap.fromTo(
-    //         textRef.current,
-    //         { opacity: 0, y: 30 },
-    //         { opacity: 1, y: 0, duration: 1.2, ease: 'power3.out' }
-    //     );
-
-    //     gsap.fromTo(
-    //         cardRef.current,
-    //         { opacity: 0, y: 30 },
-    //         { opacity: 1, y: 0, duration: 1.4, ease: 'power3.out', delay: 0.2 }
-    //     );
-
-    //     gsap.fromTo(
-    //         imageRef.current,
-    //         { opacity: 0, scale: 0.95 },
-    //         { opacity: 1, scale: 1, duration: 1.4, ease: 'power3.out', delay: 0.3 }
-    //     );
-    // }, []);
+        gsap.fromTo(
+            "#img",
+            { opacity: 0, scale: 0 },
+            { opacity: 1, scale: 1, duration: 0.8, delay: 0.5, ease: 'power3.out' }
+        );
+    }, []);
 
     return (
         <div className='h-[calc(100vh-6rem)] flex items-center justify-center bg-gradient-to-b from-background/10 to-background/70 overflow-hidden relative'>
@@ -34,10 +22,7 @@ const Hero = () => {
                 <div className='flex flex-col-reverse lg:flex-row items-center justify-center gap-10 text-center'>
 
                     {/* Left Text Section */}
-                    <div
-                        className='flex flex-col items-center lg:items-start justify-center gap-6 max-w-3xl mx-auto z-10 text-white text-left'
-                        ref={textRef}
-                    >
+                    <div id="heroText" className='flex flex-col items-center lg:items-start justify-center gap-6 max-w-3xl mx-auto z-10 text-white text-left'>
                         <Heading className="!px-0 !py-0 lg:!text-left lg:!items-start !w-fit">
                             <span className='text-[2.7rem] lg:text-6xl leading-tight font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary'>
                                 Simplify Custom Sign Quotes <br className='lg:block hidden' />Win More Sales
@@ -65,9 +50,9 @@ const Hero = () => {
                     </div>
 
                     {/* Right Image Section */}
-                    <div className='relative hidden lg:block' ref={imageRef}>
+                    <div id='img' className='relative hidden lg:block'>
                         <div className="absolute -inset-1 bg-gradient-to-r from-background to-primary rounded-3xl blur-2xl opacity-40 animate-pulse"></div>
-                        <div className='relative rounded-3xl overflow-hidden ' ref={cardRef}>
+                        <div id='heroImg' className='relative rounded-3xl overflow-hidden'>
                             <img className='w-[750px] object-contain' src="./assets/hero.png" alt="Neon Customizer Preview" />
                         </div>
                     </div>

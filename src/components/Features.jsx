@@ -59,8 +59,8 @@ const Features = () => {
                 <div className="md:hidden w-full">
                     <div className="flex flex-col gap-3">
                         {featuresData?.map((feature) => (
-                            <>
-                                <div key={feature?.id} className="w-full rounded-lg overflow-hidden shadow-sm">
+                            <div key={feature?.id}>
+                                <div className="w-full rounded-lg overflow-hidden shadow-sm">
                                     <button
                                         onClick={() => setSelectedTab(feature?.id)}
                                         className={`w-full p-4 text-left font-semibold transition-colors duration-300 flex justify-between items-center
@@ -92,7 +92,7 @@ const Features = () => {
                                         </div>
                                     </div>
                                 </div>
-                            </>
+                            </div>
                         ))}
                     </div>
                 </div>

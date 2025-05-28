@@ -32,13 +32,14 @@ button {
 
 .custom-shape {
   position: relative;
+  border-radius: 8px;
   clip-path: polygon(
     0% 0%,
     100% 0%,
-    100% 100%,
+    100% 110%,
     75% 80%,
     25% 80%,
-    0% 100%,
+    0% 110%,
     0% 0%
   );
   z-index: 1;
@@ -73,7 +74,7 @@ button {
 .pricing-card:hover .custom-shape {
   transition: background-color 0.225s ease-in-out, box-shadow 0.225s ease-in-out,
     transform 0.225s ease-in-out;
-  transform: translateY(-2px);
+  transform: translateY(-2.5px);
 }
 
 .tryBtn {

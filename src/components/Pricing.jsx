@@ -1,7 +1,33 @@
+import { useEffect } from 'react';
 import Heading from './Heading'
 import ComponentLayout from '../layouts/ComponentLayout'
 
+// gsap.registerPlugin(ScrollTrigger);
+
 const Pricing = () => {
+    useEffect(() => {
+        gsap.fromTo(
+            '.pricing-card',
+            { opacity: 0, y: 50 },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                ease: 'power2.out',
+                stagger: 0.2,
+                scrollTrigger: {
+                    trigger: '#pricing',
+                    scroller: "body",
+                    start: 'top 55%',
+                    end: 'to 30%',
+                    markers: true,
+                    scrub: 2,
+
+                },
+            }
+        );
+    }, []);
+
     return (
         <div id='pricing' className='py-15 bg-background/50 pb-24'>
             <Heading subHeading="Choose the plan that best fits your business needs">Simple, transparent pricing</Heading>
@@ -51,12 +77,12 @@ const Pricing = () => {
                 </div>
             </ComponentLayout>
         </div>
-    )
+    );
 }
 
 const PackageCard = ({ title, price, features }) => {
     return (
-        <div className='pricing-card rounded-lg shadow-md bg-background/70'>
+        <div className='pricing-card rounded-lg overflow-hidden shadow-md bg-background/70'>
             <div className='text-center custom-shape pt-5 pb-14'>
                 <h2 className='text-xl font-bold mb-4'>{title}</h2>
                 <span className='!text-4xl font-semibold block'>${price}</span>
@@ -74,7 +100,7 @@ const PackageCard = ({ title, price, features }) => {
                 </ul>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default Pricing

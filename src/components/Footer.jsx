@@ -25,7 +25,7 @@ const Footer = () => {
                     <div className="flex flex-col justify-center gap-4">
                         <p className="!text-base font-semibold">Find us on</p>
                         <div className="flex flex-row">
-                            <a className="opacity-85 hover:opacity-100 transition-all duration-100" href="https://apps.shopify.com/neon-sign-customizer" target="_blank" rel="noopener noreferrer">
+                            <a className="opacity-85 hover:opacity-100 transition-all duration-100" href="https://apps.shopify.com/partners/zepto-apps" target="_blank" rel="noopener noreferrer">
                                 <img className="w-40" src="./assets/shopify.png" alt="shopify" />
                             </a>
                         </div>

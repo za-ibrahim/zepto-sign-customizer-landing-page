@@ -46,7 +46,9 @@ const NavBar = () => {
                         {/* Extra two buttons for Demo & Try for free */}
                         <div className="flex gap-2 text-md">
                             {/* <a href="#demo" className="px-4 py-2 rounded-full border border-primary text-text font-semibold hover:text-primary transition">Demo</a> */}
-                            <a href="#try" className="tryBtn  !text-sm px-4 py-2 rounded-full font-semibold">Try Now</a>
+                            <a href="https://apps.shopify.com/neon-sign-customizer" target="_blank" rel="noopener noreferrer" className="tryBtn  !text-sm px-4 py-2 rounded-full font-semibold">
+                                Try Now
+                            </a>
                         </div>
                         {/* Hamburger for mobile */}
                         <div className="w-10 lg:hidden">

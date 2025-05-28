@@ -6,6 +6,7 @@ import Footer from './components/Footer'
 import Hero from './components/Hero'
 import NavBar from './components/NavBar'
 import Pricing from './components/Pricing'
+import Promot from './components/Promot'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
       <Commitment />
       <Features />
       <Pricing />
+      <Promot />
       <FAQ />
       <Footer />
     </main>

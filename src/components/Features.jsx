@@ -98,7 +98,7 @@ const Features = () => {
                 </div>
 
                 {/* Layout for medium and larger devices (enhanced original tab style) */}
-                <div className="hidden md:flex flex-row-reverse gap-8 items-start">
+                <div className="hidden md:flex flex-row-reverse gap-8 items-center">
                     <div className="flex flex-col gap-4 md:w-1/3 lg:w-1/4">
                         {featuresData.map((feature) => (
                             <button
@@ -121,7 +121,7 @@ const Features = () => {
                                 alt={selectedFeature?.title}
                                 className="w-full object-contain"
                             />
-                            <div className='px-6 py-4'>
+                            <div className='px-6 py-4 text-center'>
                                 <p className="leading-relaxed !text-base">{selectedFeature?.description}</p>
                             </div>
                         </div>

@@ -59,7 +59,7 @@ const FAQ = () => {
     }
 
     return (
-        <div className='py-15 pb-24'>
+        <div className='py-15 bg-background/50 pb-24'>
             <Heading>Frequently Asked Questions</Heading>
             <ComponentLayout>
                 <div className="flex flex-col gap-4">

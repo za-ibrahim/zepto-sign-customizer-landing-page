@@ -25,46 +25,27 @@ const Pricing = () => {
                         title="Essential"
                         price="14.99"
                         features={[
-                            "All free options",
-                            "Add cliparts",
-                            "2 simple materials",
-                            "10 color, 10 sizes for material",
-                            "5 possible sign shapes",
-                            "6 fixing methods",
-                            "2 borders",
-                            "Upload images to configurator",
-                            "Output pdf, svg generation",
-                            "Add additional options",
+                            "Up to 5 attributed orders per month",
+                            "Unlimited customizers",
+                            "All Features Included",
                         ]}
                     />
                     <PackageCard
                         title="Growth"
                         price="29.99"
                         features={[
-                            "All starter options",
-                            "Unlimited configurations",
-                            "All types of material unlimited",
-                            "Unlimited material colors, sizes",
-                            "Custom colors and sizes",
-                            "All shapes, borders,",
-                            "fixing methods available",
-                            "Template design",
-                            "Add additonals components",
+                            "Up to 15 attributed orders per month",
+                            "Unlimited customizers",
+                            "All Features Included",
                         ]}
                     />
                     <PackageCard
                         title="Unlimited"
                         price="149.99"
                         features={[
-                            "All starter options",
-                            "Unlimited configurations",
-                            "All types of material unlimited",
-                            "Unlimited material colors, sizes",
-                            "Custom colors and sizes",
-                            "All shapes, borders,",
-                            "fixing methods available",
-                            "Template design",
-                            "Add additonals components",
+                            "Unlimited orders per month",
+                            "Unlimited customizers",
+                            "All Features Included",
                         ]}
                     />
                 </div>

@@ -3,7 +3,7 @@ import { LinkComponent } from "./NavBar"
 
 const Footer = () => {
     return (
-        <footer className="bg-background/50 pt-4">
+        <footer className="pt-4">
             <ComponentLayout>
                 <div className="grid md:grid-cols-3 grid-cols-1  gap-8 py-8 pb-12">
                     <div>
@@ -37,7 +37,7 @@ const Footer = () => {
                     </div>
                 </div>
             </ComponentLayout>
-            <div className="mx-auto text-center bg-background/50 py-3">
+            <div className="mx-auto text-center bg-background/30 py-3">
                 <p className="!text-base">© {(new Date()).getFullYear()} Zepto Sign Customizer. All Rights Reserved</p>
             </div>
         </footer>

@@ -1,5 +1,6 @@
 import { useState } from "react";
-import logo from "../assets/logo.avif";
+import logo from "../assets/logo_2.webp";
+import ComponentLayout from "../layouts/ComponentLayout";
 
 export const LinkComponent = ({ href, className, children }) => {
     return (
@@ -16,10 +17,12 @@ const NavBar = () => {
 
     return (
         <div className="p-4 fixed w-[calc(100%-20px)] top-[10px] left-1/2 transform -translate-x-1/2 z-50 backdrop-blur-md bg-background/80 shadow-md rounded-lg">
-            <div>
+            <ComponentLayout>
                 <div className="grid lg:grid-cols-4 grid-flow-col-dense">
                     <div className="flex items-center gap-3">
-                        <img src={logo} alt="logo" className="w-8 h-8" />
+                        <div className="w-11 h-11 rounded-md overflow-hidden">
+                            <img src={logo} alt="logo" className="w-fit" />
+                        </div>
                         {/* <h1 className="text-xl font-extrabold text-primary">Zepto Sign Customizer</h1> */}
                     </div>
                     {/* Nav menu with dropdown if needed and responsive */}
@@ -43,7 +46,7 @@ const NavBar = () => {
                         {/* Extra two buttons for Demo & Try for free */}
                         <div className="flex gap-2 text-md">
                             {/* <a href="#demo" className="px-4 py-2 rounded-full border border-primary text-text font-semibold hover:text-primary transition">Demo</a> */}
-                            <a href="#try" className="tryBtn  !text-sm px-4 py-2 rounded-full font-semibold">Try for Free</a>
+                            <a href="#try" className="tryBtn  !text-sm px-4 py-2 rounded-full font-semibold">Try Now</a>
                         </div>
                         {/* Hamburger for mobile */}
                         <div className="w-10 lg:hidden">
@@ -71,7 +74,7 @@ const NavBar = () => {
                         <LinkComponent href="/">Contact us</LinkComponent>
                     </div>
                 </nav>
-            </div>
+            </ComponentLayout>
         </div>
     )
 }

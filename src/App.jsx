@@ -1,13 +1,8 @@
 import './App.css'
-import Commitment from './components/Commitment'
-import FAQ from './components/FAQ'
-import Features from './components/Features'
 import Footer from './components/Footer'
-import Hero from './components/Hero'
 import NavBar from './components/NavBar'
-import Pricing from './components/Pricing'
-import Promot from './components/Promot'
 import ZendeskChat from './components/ZendeskChat'
+import Home from './pages/Home'
 
 function App() {
 
@@ -20,12 +15,7 @@ function App() {
       <h1 className='text-3xl font-extrabold text-text'>Hi, Ibrahim</h1> */}
       <NavBar />
       <div className='pt-[95px]' />
-      <Hero />
-      <Commitment />
-      <Features />
-      <Pricing />
-      <Promot />
-      <FAQ />
+      <Home />
       <Footer />
       <ZendeskChat />
     </main>

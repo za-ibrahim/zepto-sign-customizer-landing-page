@@ -3,23 +3,23 @@ import { LinkComponent } from "./NavBar"
 
 const Footer = () => {
     return (
-        <footer className="pt-4 bg-accent_3/10">
+        <footer className="pt-4 bg-gray-100">
             <ComponentLayout>
                 <div className="grid md:grid-cols-3 grid-cols-1  gap-8 py-8 pb-12">
                     <div>
                         <ul className="flex flex-col gap-4">
-                            <LinkComponent className="!self-start hover:!text-background" href="/">Home</LinkComponent>
-                            <LinkComponent className="!self-start hover:!text-background" href="/">Review</LinkComponent>
-                            <LinkComponent className="!self-start hover:!text-background" href="/">Help Center</LinkComponent>
-                            <LinkComponent className="!self-start hover:!text-background" href="/">About us</LinkComponent>
+                            <LinkComponent className="!self-start" href="/">Home</LinkComponent>
+                            {/* <LinkComponent className="!self-start" href="/">Review</LinkComponent>
+                            <LinkComponent className="!self-start" href="/">Help Center</LinkComponent> */}
+                            <LinkComponent className="!self-start" href="/">About us</LinkComponent>
                         </ul>
                     </div>
                     <div>
                         <ul className="flex flex-col gap-4">
-                            <LinkComponent className="!self-start hover:!text-background" href="/">Contact us</LinkComponent>
-                            <LinkComponent className="!self-start hover:!text-background" href="/">Shopify Services</LinkComponent>
-                            <LinkComponent className="!self-start hover:!text-background" href="/">Custom Ecommerce</LinkComponent>
-                            <LinkComponent className="!self-start hover:!text-background" href="/">Privacy Policy</LinkComponent>
+                            <LinkComponent className="!self-start" href="/">Contact us</LinkComponent>
+                            <LinkComponent className="!self-start" target="_blank" href="https://zeptoapps.com/collections/all">Shopify Services</LinkComponent>
+                            <LinkComponent className="!self-start" target="_blank" href="https://zeptoapps.com/pages/custom-ecommerce">Custom Ecommerce</LinkComponent>
+                            <LinkComponent className="!self-start" href="/">Privacy Policy</LinkComponent>
                         </ul>
                     </div>
                     <div className="flex flex-col justify-center gap-4">
@@ -37,7 +37,7 @@ const Footer = () => {
                     </div>
                 </div>
             </ComponentLayout>
-            <div className="mx-auto text-center bg-background/30 py-3">
+            <div className="mx-auto text-center bg-background/50 py-3">
                 <p className="!text-base">© {(new Date()).getFullYear()} Zepto Sign Customizer. All Rights Reserved</p>
             </div>
         </footer>

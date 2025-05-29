@@ -2,9 +2,9 @@ import { useState } from "react";
 import logo from "../assets/logo_2.webp";
 import ComponentLayout from "../layouts/ComponentLayout";
 
-export const LinkComponent = ({ href, className, children }) => {
+export const LinkComponent = ({ href, className, children, ...props }) => {
     return (
-        <a href={href} className={`self-center text-md font-semibold text-text hover:text-primary cursor-pointer ${className}`}>{children}</a>
+        <a {...props} href={href} className={`self-center text-md font-semibold text-text hover:text-primary cursor-pointer ${className}`}>{children}</a>
     )
 }
 
@@ -30,7 +30,7 @@ const NavBar = () => {
                         <LinkComponent href="/">Home</LinkComponent>
                         <LinkComponent href="#features">Features</LinkComponent>
                         <LinkComponent href="#pricing">Pricing</LinkComponent>
-                        <LinkComponent href="/">Contact us</LinkComponent>
+                        <LinkComponent href="">Contact us</LinkComponent>
                         {/* <div className="relative group">
                         <button className="text-base text-primary hover:underline flex items-center gap-1">
                             More

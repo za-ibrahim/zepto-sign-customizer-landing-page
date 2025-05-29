@@ -98,7 +98,7 @@ const Features = () => {
                 </div>
 
                 {/* Layout for medium and larger devices (enhanced original tab style) */}
-                <div className="hidden md:flex flex-row-reverse gap-8 items-center">
+                <div className="feature-body hidden md:flex flex-row-reverse gap-8 items-center">
                     <div className="flex flex-col gap-4 md:w-1/3 lg:w-1/4">
                         {featuresData.map((feature) => (
                             <button
@@ -110,7 +110,13 @@ const Features = () => {
                                         : 'bg-background/50'
                                     }`}
                             >
-                                {feature?.title}
+                                <div
+                                    className='feature-tab overflow-hidden flex flex-col justify-center'
+                                >
+                                    <span>
+                                        {feature?.title}
+                                    </span>
+                                </div>
                             </button>
                         ))}
                     </div>

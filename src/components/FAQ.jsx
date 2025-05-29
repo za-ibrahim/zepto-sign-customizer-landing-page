@@ -1,21 +1,33 @@
-import { useState } from 'react'
-import Heading from './Heading'
-import ComponentLayout from '../layouts/ComponentLayout'
+import { useState } from "react";
+import Heading from "./Heading";
+import ComponentLayout from "../layouts/ComponentLayout";
 
 const faqData = [
     {
-        question: 'What is ZeptoApp?',
-        answer: 'ZeptoApp is a platform that helps you build landing pages quickly and easily.',
+        question: "Why Zepto Sign Customizer?",
+        answer: "While others charge a premium, we deliver the same powerful features at an unbeatable price. Zepto is faster, easier to use, and completely transparent—without draining your budget.",
     },
     {
-        question: 'How do I get started?',
-        answer: 'Simply sign up and follow the onboarding steps to create your first landing page.',
+        question: "Can the App Set Different Pricing Per Letter Based on Size?",
+        answer: "Definitely! With Zepto’s advanced pricing options, you can set custom pricing per letter based on its width and height—giving you full control over how each design is priced.",
     },
     {
-        question: 'Is there a free trial?',
-        answer: 'Yes, we offer a 14-day free trial for all new users.',
+        question: "Can I Show the Width and Height Calculation?",
+        answer: "Yes! Zepto Sign Customizer accurately calculates and displays the width and height of each sign in the live preview. With our advanced pricing model, you can even set unique width and height rules for each font—ensuring precision and flexibility for every custom order.",
     },
-]
+    {
+        question: "Is Volumetric Weight Calculation Available?",
+        answer: "Certainly! Zepto Sign Customizer includes volumetric weight calculation based on the dimensions of the sign. This allows you to apply accurate shipping costs based on weight. Alternatively, you can set flat shipping rates based on the product’s area—offering flexibility in how you manage logistics and pricing.",
+    },
+    {
+        question: "Can My Customers Submit a Quote Request?",
+        answer: "Absolutely! Zepto Sign Customizer lets you create a fully customizable quote request form. Collect customer emails, design files, usage details, and any other necessary information. All submissions are sent directly to your email for quick follow-up and easy communication.",
+    },
+    {
+        question: "The App Is Easy to Set Up—But Can I Get Help?",
+        answer: "Always! We're here whenever you need help, with expert support just a message away.",
+    },
+];
 
 // FAQItem subcomponent for reusability
 const FAQItem = ({ question, answer, open, onClick, idx }) => (
@@ -27,7 +39,10 @@ const FAQItem = ({ question, answer, open, onClick, idx }) => (
             aria-controls={`faq-answer-${idx}`}
         >
             <span className="text-text">{question}</span>
-            <span className={`ml-2 transform transition-transform duration-200 ${open ? 'rotate-180' : ''}`}>
+            <span
+                className={`ml-2 transform transition-transform duration-200 ${open ? "rotate-180" : ""
+                    }`}
+            >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6 text-primary"
@@ -44,22 +59,23 @@ const FAQItem = ({ question, answer, open, onClick, idx }) => (
         </button>
         <div
             id={`faq-answer-${idx}`}
-            className={`faq-answer bg-background/50  overflow-hidden transition-all duration-400 ease-in-out px-8 ${open ? 'max-h-40 opacity-100 py-8' : 'py-0 max-h-0 opacity-0'}`}
+            className={`faq-answer bg-background/40 overflow-hidden transition-all duration-400 ease-in-out px-8 leading-relaxed ${open ? "max-h-40 opacity-100 py-8" : "py-0 max-h-0 opacity-0"
+                }`}
         >
             <span>{answer}</span>
         </div>
     </div>
-)
+);
 
 const FAQ = () => {
-    const [openIndex, setOpenIndex] = useState(null)
+    const [openIndex, setOpenIndex] = useState(null);
 
     const toggleIndex = (idx) => {
-        setOpenIndex(openIndex === idx ? null : idx)
-    }
+        setOpenIndex(openIndex === idx ? null : idx);
+    };
 
     return (
-        <div className='py-15 bg-background/50 pb-24'>
+        <div className="py-15 bg-background/50 pb-24">
             <Heading>Frequently Asked Questions</Heading>
             <ComponentLayout>
                 <div className="flex flex-col gap-4">
@@ -76,7 +92,7 @@ const FAQ = () => {
                 </div>
             </ComponentLayout>
         </div>
-    )
-}
+    );
+};
 
-export default FAQ
+export default FAQ;

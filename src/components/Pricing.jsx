@@ -2,8 +2,6 @@ import { useEffect } from 'react';
 import Heading from './Heading'
 import ComponentLayout from '../layouts/ComponentLayout'
 
-gsap.registerPlugin(ScrollTrigger);
-
 const Pricing = () => {
     useEffect(() => {
         gsap.fromTo(

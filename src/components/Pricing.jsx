@@ -4,6 +4,8 @@ import ComponentLayout from '../layouts/ComponentLayout'
 
 const Pricing = () => {
     useEffect(() => {
+        // Disable animation on mobile devices
+        if (window.innerWidth <= 768) return;
         gsap.fromTo(
             '.pricing-card',
             { opacity: 0, y: 50 },
@@ -80,6 +82,8 @@ const PackageCard = ({ title, price, features }) => {
     const priceRef = useRef(null);
 
     useEffect(() => {
+        // Disable animation on mobile devices
+        if (window.innerWidth <= 768) return;
         if (!window.gsap || !window.SplitText) return;
         const gsap = window.gsap;
         const SplitText = window.SplitText;
@@ -111,10 +115,10 @@ const PackageCard = ({ title, price, features }) => {
             let elem = chars[0];
             let rect = elem.getBoundingClientRect();
             gsap.from(chars, {
-                y: () => -1 * (rect.y + charH + 500),
-                fontWeight: weightTarget,
+                // y: () => -1 * (rect.y + charH + 500),
+                fontWeight: weightTarget * 2,
                 fontStretch: stretchTarget,
-                scaleY: 2,
+                scaleY: 0.005,
                 ease: 'elastic(0.2, 0.1)',
                 duration: 1.5,
                 delay: 0.5,
@@ -239,7 +243,7 @@ const PackageCard = ({ title, price, features }) => {
     return (
         <div className='pricing-card rounded-lg overflow-hidden shadow-md bg-background/70'>
             <div className='text-center custom-shape pt-5 pb-14 stage'>
-                <h2 className='text-xl font-bold mb-4 txt'>{title}</h2>
+                <h2 className='text-xl font-bold mb-4'>{title}</h2>
                 <span ref={priceRef} className='!text-4xl font-semibold block txt cursor-pointer select-none'>${price}</span>
             </div>
             {/* ...existing code... */}

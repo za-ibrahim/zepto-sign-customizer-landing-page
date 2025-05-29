@@ -25,7 +25,7 @@ const Hero = () => {
                     <div id="heroText" className='flex flex-col items-center lg:items-start justify-center gap-6 max-w-3xl mx-auto z-10 text-white text-left'>
                         <Heading className="!px-0 !py-0 lg:!text-left lg:!items-start !w-fit">
                             <span className='text-[2.7rem] lg:text-6xl leading-tight font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary'>
-                                Simplify Custom Sign Quotes <br className='lg:block hidden' />Win More Sales
+                                The Customizer Built to Elevate Sales
                             </span>
                         </Heading>
                         <p className='text-base lg:text-lg text-center lg:text-left text-text/60 max-w-xl w-fit'>

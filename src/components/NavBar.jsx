@@ -26,7 +26,7 @@ const NavBar = () => {
                         {/* <h1 className="text-xl font-extrabold text-primary">Zepto Sign Customizer</h1> */}
                     </div>
                     {/* Nav menu with dropdown if needed and responsive */}
-                    <nav className="hidden lg:flex col-span-2 gap-5 justify-center">
+                    <nav className="hidden lg:flex col-span-2 gap-8 justify-center">
                         <LinkComponent href="/">Home</LinkComponent>
                         <LinkComponent href="#features">Features</LinkComponent>
                         <LinkComponent href="#pricing">Pricing</LinkComponent>

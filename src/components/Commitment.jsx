@@ -8,23 +8,23 @@ const Commitment = () => {
             <ComponentLayout>
                 <div className='grid md:grid-cols-2 grid-cols-1 gap-6'>
                     <CompCard
-                        title="Compatible with Themes"
-                        description="Easily integrate Zepto Product Personalizer with your existing theme and store setup, ensuring a smooth installation, transition, and more."
+                        title="Theme-Friendly Integration"
+                        description="Seamlessly integrate Zepto Sign Customizer with your existing store setup for smooth installation, easy transitions, and ongoing updates."
                         icon="./assets/Theme.svg"
                     />
                     <CompCard
-                        title="Compatible with Themes"
-                        description="Easily integrate Zepto Product Personalizer with your existing theme and store setup, ensuring a smooth installation, transition, and more."
+                        title="Designed for Simplicity"
+                        description="Offering a sign customization experience doesn't have to be hard—Zepto Sign Customizer is simple to use yet impressively powerful."
                         icon="./assets/Customization.svg"
                     />
                     <CompCard
-                        title="Compatible with Themes"
-                        description="Easily integrate Zepto Product Personalizer with your existing theme and store setup, ensuring a smooth installation, transition, and more."
+                        title="Zero-Code Required"
+                        description="Zepto Sign Customizer requires no coding skills and offers a user-friendly experience that feels as intuitive as using your phone."
                         icon="./assets/No-Code.svg"
                     />
                     <CompCard
-                        title="Compatible with Themes"
-                        description="Easily integrate Zepto Product Personalizer with your existing theme and store setup, ensuring a smooth installation, transition, and more."
+                        title="Support at Every Step"
+                        description="Need help? Our chat and email support has you covered every step of the way."
                         icon="./assets/Community.svg"
                     />
                 </div>

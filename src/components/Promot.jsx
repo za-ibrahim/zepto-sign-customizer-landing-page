@@ -6,7 +6,7 @@ const Promot = () => {
     return (
         <div className='py-15 bg-secondary/30 pb-24'>
             <ComponentLayout>
-                <Heading>Try our top-tier Product Sign Customizer and get ahead of the competition.</Heading>
+                <Heading>Try our best Sign Customizer—built to keep you ahead</Heading>
                 <div className='flex sm:flex-row flex-col items-center mx-auto gap-4 pt-2 w-fit'>
                     <a href="https://apps.shopify.com/neon-sign-customizer" target="_blank" rel="noopener noreferrer">
                         <button className='tryBtn group flex items-center justify-center shadow text-black !border !border-secondary/60 px-6 py-3 sm:text-base text-sm font-semibold rounded-full gap-2 transition-all duration-300'>

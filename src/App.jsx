@@ -7,6 +7,7 @@ import Hero from './components/Hero'
 import NavBar from './components/NavBar'
 import Pricing from './components/Pricing'
 import Promot from './components/Promot'
+import ZendeskChat from './components/ZendeskChat'
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
       <Promot />
       <FAQ />
       <Footer />
+      <ZendeskChat />
     </main>
   )
 }

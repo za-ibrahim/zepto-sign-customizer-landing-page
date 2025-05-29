@@ -76,19 +76,19 @@ const Features = () => {
                                             </svg>
                                         </span>
                                     </button>
-                                </div>
-                                <div
-                                    className={`rounded-xl overflow-hidden shadow-md transition-all duration-500 ease-in-out bg-background/50
+                                    <div
+                                        className={`rounded-xl rounded-t-none overflow-hidden shadow-md transition-all duration-500 ease-in-out bg-background/50
                                                 ${selectedTab === feature?.id ? 'max-h-[1000px] opacity-100 visible' : 'max-h-0 opacity-0 invisible'}`}
-                                >
-                                    <div>
-                                        <img
-                                            src={selectedFeature?.image}
-                                            alt={selectedFeature?.title}
-                                            className="w-full object-contain"
-                                        />
-                                        <div className='px-6 py-4 text-center'>
+                                    >
+                                        <div>
+                                            <img
+                                                src={selectedFeature?.image}
+                                                alt={selectedFeature?.title}
+                                                className="w-full object-contain"
+                                            />
+                                            {/* <div className='px-6 py-4 text-center'>
                                             <p className="leading-relaxed !text-base">{feature?.description}</p>
+                                        </div> */}
                                         </div>
                                     </div>
                                 </div>
@@ -121,9 +121,9 @@ const Features = () => {
                                 alt={selectedFeature?.title}
                                 className="w-full object-contain"
                             />
-                            <div className='px-6 py-4 text-center'>
+                            {/* <div className='px-6 py-4 text-center'>
                                 <p className="leading-relaxed !text-base">{selectedFeature?.description}</p>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

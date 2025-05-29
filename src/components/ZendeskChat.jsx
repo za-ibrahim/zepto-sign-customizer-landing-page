@@ -11,8 +11,7 @@ const ZendeskChat = () => {
         try {
             user_info = JSON.parse(window?.__APP_DATA__?.user_info)
             // console.log(user_info)
-        } catch (error) {
-        }
+        } catch (error) { }
 
         window.zESettings = {
             webWidget: {

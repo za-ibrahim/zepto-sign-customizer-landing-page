@@ -53,7 +53,7 @@ const Hero = () => {
                     <div id='img' className='relative hidden lg:block'>
                         <div className="absolute -inset-1 bg-gradient-to-r from-background to-primary rounded-3xl blur-2xl opacity-40 animate-pulse"></div>
                         <div id='heroImg' className='relative rounded-3xl overflow-hidden'>
-                            <img className='w-[750px] object-contain' src="./assets/hero.png" alt="Neon Customizer Preview" />
+                            <img className='w-[1000px] object-contain' src="./assets/hero.png" alt="Neon Customizer Preview" />
                         </div>
                     </div>
 

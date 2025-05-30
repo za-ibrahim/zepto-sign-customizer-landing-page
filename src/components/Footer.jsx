@@ -16,7 +16,7 @@ const Footer = () => {
                     </div>
                     <div>
                         <ul className="flex flex-col gap-4">
-                            <LinkComponent className="!self-start" href="/">Contact us</LinkComponent>
+                            <LinkComponent className="!self-start" href="contact">Contact us</LinkComponent>
                             <LinkComponent className="!self-start" target="_blank" href="https://zeptoapps.com/collections/all">Shopify Services</LinkComponent>
                             <LinkComponent className="!self-start" target="_blank" href="https://zeptoapps.com/pages/custom-ecommerce">Custom Ecommerce</LinkComponent>
                             <LinkComponent className="!self-start" href="/">Privacy Policy</LinkComponent>

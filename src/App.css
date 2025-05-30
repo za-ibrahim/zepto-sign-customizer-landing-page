@@ -25,9 +25,13 @@ body::before {
   letter-spacing: 2px;
 }
 
-
 .parallax-effect {
   transform-style: preserve-3d;
+  transition: all 0.125s ease-in-out;
+  :hover {
+    filter: drop-shadow(0 0 5px var(--color-primary))
+    drop-shadow(0 0 10px var(--color-secondary)) drop-shadow(0 0 20px #00ffff);
+  }
 
   .inner-element {
     display: flex;

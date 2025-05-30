@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import logo from "../assets/logo_2.webp";
 import ComponentLayout from "../layouts/ComponentLayout";
 
@@ -27,10 +27,10 @@ const NavBar = () => {
                     </div>
                     {/* Nav menu with dropdown if needed and responsive */}
                     <nav className="hidden lg:flex col-span-2 gap-8 justify-center">
-                        <LinkComponent href="/">Home</LinkComponent>
-                        <LinkComponent href="/#features">Features</LinkComponent>
-                        <LinkComponent href="/#pricing">Pricing</LinkComponent>
-                        <LinkComponent href="contact">Contact us</LinkComponent>
+                        <LinkComponent className="navItem" href="/">Home</LinkComponent>
+                        <LinkComponent className="navItem" href="/#features">Features</LinkComponent>
+                        <LinkComponent className="navItem" href="/#pricing">Pricing</LinkComponent>
+                        <LinkComponent className="navItem" href="contact">Contact us</LinkComponent>
                         {/* <div className="relative group">
                         <button className="text-base text-primary hover:underline flex items-center gap-1">
                             More

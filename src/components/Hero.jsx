@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import Heading from './Heading';
 import ComponentLayout from '../layouts/ComponentLayout';
+import ReactParallaxTilt from 'react-parallax-tilt';
 
 const Hero = () => {
     useEffect(() => {
@@ -24,8 +25,8 @@ const Hero = () => {
                     {/* Left Text Section */}
                     <div id="heroText" className='flex flex-col items-center lg:items-start justify-center gap-6 max-w-3xl mx-auto z-10 text-white text-left'>
                         <Heading className="!px-0 !py-0 lg:!text-left lg:!items-start !w-fit">
-                            <span className='text-[2.7rem] xl:text-6xl lg:text-5xl leading-tight font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary'>
-                                The Customizer<br />Built to <br />Elevate Sales
+                            <span id="mainText" className='text-[2.7rem] xl:text-6xl lg:text-5xl leading-tight font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary'>
+                                The Custom<span id='specialI'>i</span>zer<br />Built to <br />Elevate Sales
                             </span>
                         </Heading>
                         <p className='text-base lg:text-lg text-center lg:text-left text-text/60 max-w-xl w-fit'>
@@ -50,10 +51,12 @@ const Hero = () => {
                     </div>
 
                     {/* Right Image Section */}
-                    <div id='img' className='relative hidden lg:block'>
-                        <div className="absolute -inset-1 bg-gradient-to-r from-background to-primary rounded-3xl blur-2xl opacity-40 animate-pulse"></div>
-                        <div id='heroImg' className='relative rounded-3xl overflow-hidden'>
-                            <img className='w-[800px] object-contain' src="./assets/hero.png" alt="Neon Customizer Preview" />
+                    <div id='img' className='relative hidden lg:block' data-tilt>
+                        <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-primary/50 rounded-3xl blur-2xl opacity-40 animate-pulse"></div>
+                        <div id='heroImg' className=''>
+                            <ReactParallaxTilt className="background-stripes parallax-effect" perspective={800}>
+                                <img className='w-[800px] object-contain' src="./assets/hero.png" alt="Neon Customizer Preview" />
+                            </ReactParallaxTilt>
                         </div>
                     </div>
 

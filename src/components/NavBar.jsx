@@ -30,7 +30,7 @@ const NavBar = () => {
                         <LinkComponent href="/">Home</LinkComponent>
                         <LinkComponent href="#features">Features</LinkComponent>
                         <LinkComponent href="#pricing">Pricing</LinkComponent>
-                        <LinkComponent href="">Contact us</LinkComponent>
+                        <LinkComponent href="contact">Contact us</LinkComponent>
                         {/* <div className="relative group">
                         <button className="text-base text-primary hover:underline flex items-center gap-1">
                             More

@@ -11,7 +11,7 @@ const Footer = () => {
                             <LinkComponent className="!self-start" href="/">Home</LinkComponent>
                             {/* <LinkComponent className="!self-start" href="/">Review</LinkComponent>
                             <LinkComponent className="!self-start" href="/">Help Center</LinkComponent> */}
-                            <LinkComponent className="!self-start" href="/">About us</LinkComponent>
+                            <LinkComponent className="!self-start" href="about-us">About us</LinkComponent>
                         </ul>
                     </div>
                     <div>

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Heading from './Heading'
 import ComponentLayout from '../layouts/ComponentLayout'
 
@@ -80,6 +80,7 @@ const Pricing = () => {
 
 const PackageCard = ({ title, price, features }) => {
     const priceRef = useRef(null);
+    const [trigger, setTrigger] = useState(0);
 
     useEffect(() => {
         // Disable animation on mobile devices
@@ -87,6 +88,10 @@ const PackageCard = ({ title, price, features }) => {
         if (!window.gsap || !window.SplitText) return;
         const gsap = window.gsap;
         const SplitText = window.SplitText;
+        if (document.fonts && document.fonts.status !== 'loaded') {
+            document.fonts.ready.then(() => setTrigger(prev => prev + 1));
+            return;
+        }
         // Split the price text into chars
         let _mySplitText = new SplitText(priceRef.current, {
             type: 'chars',
@@ -238,7 +243,7 @@ const PackageCard = ({ title, price, features }) => {
         return () => {
             if (currentPriceRef) currentPriceRef.innerHTML = '$' + price;
         };
-    }, [price]);
+    }, [price, trigger]);
 
     return (
         <div className='pricing-card rounded-lg overflow-hidden shadow-md bg-background/70'>

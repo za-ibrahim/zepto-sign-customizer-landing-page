@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import ComponentLayout from '../layouts/ComponentLayout'
 import Heading from './Heading'
 
@@ -99,24 +99,18 @@ const Features = () => {
 
                 {/* Layout for medium and larger devices (enhanced original tab style) */}
                 <div className="feature-body hidden md:flex flex-row-reverse gap-8 items-center">
-                    <div className="flex flex-col gap-4 md:w-1/3 lg:w-1/4">
+                    <div className="flex flex-col gap-4">
                         {featuresData.map((feature) => (
                             <button
                                 key={feature?.id}
                                 onClick={() => setSelectedTab(feature?.id)}
-                                className={`w-full p-4 rounded-xl text-left transition-colors duration-300 font-semibold cursor-pointer overflow-hidden
+                                className={`p-4 rounded-xl text-left transition-colors duration-300 font-semibold cursor-pointer overflow-hidden
                                             ${selectedTab === feature?.id
                                         ? 'tryBtn text-white shadow-sm'
                                         : 'bg-background/50'
                                     }`}
                             >
-                                <div
-                                    className='feature-tab overflow-hidden flex flex-col justify-center'
-                                >
-                                    <span>
-                                        {feature?.title}
-                                    </span>
-                                </div>
+                                {feature?.title}
                             </button>
                         ))}
                     </div>

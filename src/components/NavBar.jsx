@@ -28,8 +28,8 @@ const NavBar = () => {
                     {/* Nav menu with dropdown if needed and responsive */}
                     <nav className="hidden lg:flex col-span-2 gap-8 justify-center">
                         <LinkComponent href="/">Home</LinkComponent>
-                        <LinkComponent href="#features">Features</LinkComponent>
-                        <LinkComponent href="#pricing">Pricing</LinkComponent>
+                        <LinkComponent href="/#features">Features</LinkComponent>
+                        <LinkComponent href="/#pricing">Pricing</LinkComponent>
                         <LinkComponent href="contact">Contact us</LinkComponent>
                         {/* <div className="relative group">
                         <button className="text-base text-primary hover:underline flex items-center gap-1">

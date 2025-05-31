@@ -104,13 +104,16 @@ const Features = () => {
                             <button
                                 key={feature?.id}
                                 onClick={() => setSelectedTab(feature?.id)}
-                                className={`p-4 rounded-xl text-left transition-colors duration-300 font-semibold cursor-pointer overflow-hidden
+                                className={`p-4 group rounded-xl text-left transition-colors duration-300 font-semibold cursor-pointer overflow-hidden
                                             ${selectedTab === feature?.id
                                         ? 'tryBtn text-white shadow-sm'
                                         : 'bg-background/50'
                                     }`}
                             >
-                                {feature?.title}
+                                <div className='relative overflow-hidden'>
+                                    <span className='block group-hover:-translate-y-8 translate-y-0 transition-all duration-500'>{feature?.title}</span>
+                                    <span className='absolute top-0 block translate-y-8 group-hover:translate-y-0 transition-all duration-500'>{feature?.title}</span>
+                                </div>
                             </button>
                         ))}
                     </div>

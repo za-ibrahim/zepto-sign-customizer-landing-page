@@ -8,7 +8,7 @@ const UpperFooter = () => {
                 <img src="./assets/footer-image-mutated.png" alt="footer image" className='mx-auto object-cover size-full md:object-contain' />
                 <div className='absolute bottom-0 w-full flex items-end justify-center'>
                     <a href="https://apps.shopify.com/neon-sign-customizer" target="_blank" rel="noopener noreferrer" className=''>
-                        <button className='tryBtn text-black !border !border-secondary/60 md:px-6 md:py-3 sm:text-base px-3 py-2 text-xs font-semibold rounded-full gap-2 transition-all duration-300'>
+                        <button className='tryBtn text-black md:px-6 md:py-3 sm:text-base px-3 py-2 text-xs font-semibold rounded-full gap-2 transition-all duration-300'>
                             <span>Create Your First Sign</span>
                         </button>
                     </a>

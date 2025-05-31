@@ -2,11 +2,11 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #908fff;
-  --color-secondary: #c8c8ff;
-  --color-accent: #9d9bed;
-  --color-accent_2: #b3aaff; /* lighter, more vibrant version of accent */
-  --color-accent_3: #6c63ff; /* deeper, more saturated version of accent */
+  --color-primary: #127FC4;
+  --color-secondary: #FC91F9;
+  --color-accent: #C4105F;
+  --color-accent_2: #FF4F9D; /* lighter, vibrant version of accent */
+  --color-accent_3: #7A0B3C; /* deeper, more saturated version of accent */
   --color-background: #fff;
   --color-text: #333333;
   --font-hero: "Parkinsans", sans-serif;
@@ -60,13 +60,10 @@ button {
   background: linear-gradient(
     60deg,
     var(--color-primary),
+    var(--color-secondary),
     var(--color-accent),
-    var(--color-accent_2),
-    var(--color-accent_3),
     var(--color-primary),
-    var(--color-accent),
-    var(--color-accent_2),
-    var(--color-accent_3),
+    var(--color-secondary),
     var(--color-primary)
   );
   background-size: 900% 900%;
@@ -135,11 +132,11 @@ button {
 @keyframes glow-pulse {
   0%,
   100% {
-    box-shadow: 0 0 0px 0px var(--color-accent_2),
-      0 0 0px 0px var(--color-accent_3);
+    box-shadow: 0 0 0px 0px var(--color-secondary),
+      0 0 0px 0px var(--color-accent);
   }
   50% {
-    box-shadow: 0 0 32px 12px var(--color-accent_2),
-      0 0 64px 24px var(--color-accent_3);
+    box-shadow: 0 0 32px 12px var(--color-secondary),
+      0 0 64px 24px var(--color-accent);
   }
 }

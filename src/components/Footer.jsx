@@ -1,16 +1,18 @@
 import ComponentLayout from "../layouts/ComponentLayout"
 import { LinkComponent } from "./NavBar"
+import UpperFooter from "./UpperFooter"
 
 const Footer = () => {
     return (
-        <footer className="pt-4 bg-gray-100">
-            <ComponentLayout>
+        <footer className="pt-4 bg-[#110425]">
+            <UpperFooter />
+            {/* <ComponentLayout>
                 <div className="grid md:grid-cols-3 grid-cols-1  gap-8 py-8 pb-12">
                     <div>
                         <ul className="flex flex-col gap-4">
                             <LinkComponent className="!self-start" href="/">Home</LinkComponent>
-                            {/* <LinkComponent className="!self-start" href="/">Review</LinkComponent>
-                            <LinkComponent className="!self-start" href="/">Help Center</LinkComponent> */}
+                            <LinkComponent className="!self-start" href="/">Review</LinkComponent>
+                            <LinkComponent className="!self-start" href="/">Help Center</LinkComponent>
                             <LinkComponent className="!self-start" href="about-us">About us</LinkComponent>
                         </ul>
                     </div>
@@ -36,9 +38,17 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-            </ComponentLayout>
-            <div className="mx-auto text-center bg-background/50 py-3">
+            </ComponentLayout> */}
+            {/* <div className="mx-auto text-center bg-background/50 py-3">
                 <p className="!text-base">© {(new Date()).getFullYear()} Zepto Sign Customizer. All Rights Reserved</p>
+            </div> */}
+            <div className="px-4 py-3 text-background relative">
+                {/* <p className="!text-base">© {(new Date()).getFullYear()} Zepto Sign Customizer. All Rights Reserved</p> */}
+                <ul className="flex items-center justify-center gap-4">
+                    <li>Privacy</li>
+                    <li>Privacy Policy</li>
+                </ul>
+                <p className="!text-base absolute top-0 left-0">© {(new Date()).getFullYear()} Zepto Sign Customizer</p>
             </div>
         </footer>
     )

@@ -68,6 +68,7 @@ const featuresData = [
         id: 7,
         title: 'All-Inclusive Signage Solutions',
         description: 'Use different styles to keep your store sleek and functional on any device.',
+        // image: './assets/07.png',
         image: [
             { src: './assets/dynamic/7/bg.png', alt: 'bg', className: "", dataAtroposOffset: "-1" },
             { src: './assets/dynamic/7/upper.png', alt: 'All-Inclusive Signage Solutions', className: 'absolute left-[0%] top-[0%] w-[100%] h-[100%] object-contain block z-10 max-w-none pointer-events-none transform-3d', style: { transitionDuration: "300ms", transform: "translate3d(0px, 0px, 0px)" }, dataAtroposOffset: "3" },
@@ -139,8 +140,8 @@ const Features = () => {
                                     }`}
                             >
                                 <div className='relative overflow-hidden'>
-                                    <span className='block group-hover:-translate-y-8 translate-y-0 transition-all duration-500'>{feature?.title}</span>
-                                    <span className='absolute top-0 block translate-y-8 group-hover:translate-y-0 transition-all duration-500'>{feature?.title}</span>
+                                    <span className='block group-hover:-translate-y-8 translate-y-0 transition-all ease-out duration-300 p-0 m-0'>{feature?.title}</span>
+                                    <span className='absolute top-0 block translate-y-8 group-hover:translate-y-0 transition-all ease-out duration-300 p-0 m-0'>{feature?.title}</span>
                                 </div>
                             </button>
                         ))}

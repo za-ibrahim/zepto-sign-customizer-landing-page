@@ -5,7 +5,6 @@ import Pricing from '../components/Pricing'
 import Promot from '../components/Promot'
 import FAQ from '../components/FAQ'
 import ScrollToHashElement from '../components/ScrollToHashElement'
-import UpperFooter from '../components/UpperFooter'
 
 const Home = () => {
     return (
@@ -17,7 +16,6 @@ const Home = () => {
             <Pricing />
             <Promot />
             <FAQ />
-            <UpperFooter />
         </>
     )
 }

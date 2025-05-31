@@ -8,8 +8,8 @@ const featuresData = [
         id: 1,
         title: 'Stunningly Realistic Previews',
         description: 'Go beyond limits with endless customization, offering personalization as unique as your vision.',
-        // image: './assets/01.png',
-        image: [
+        image: './assets/01.png',
+        images: [
             { src: './assets/dynamic/1/bg.png', alt: 'bg', className: "", dataAtroposOffset: "-1" },
             { src: './assets/dynamic/1/upper.png', alt: 'All-Inclusive Signage Solutions', className: 'absolute left-[0%] top-[0%] w-[100%] h-[100%] object-contain block z-10 max-w-none pointer-events-none transform-3d', style: { transitionDuration: "300ms", transform: "translate3d(0px, 0px, 0px)" }, dataAtroposOffset: "3" },
         ],
@@ -18,8 +18,8 @@ const featuresData = [
         id: 2,
         title: 'Worldwide Accessibility',
         description: 'Provide Options with Detail: Text, Color, Images, Uploads, & More at Your Command.',
-        // image: './assets/02.png',
-        image: [
+        image: './assets/02.png',
+        images: [
             { src: './assets/dynamic/2/bg.png', alt: 'bg', className: "", dataAtroposOffset: "-1" },
             { src: './assets/dynamic/2/upper.png', alt: 'All-Inclusive Signage Solutions', className: 'absolute left-[0%] top-[0%] w-[100%] h-[100%] object-contain block z-10 max-w-none pointer-events-none transform-3d', style: { transitionDuration: "300ms", transform: "translate3d(0px, 0px, 0px)" }, dataAtroposOffset: "3" },
         ],
@@ -28,8 +28,8 @@ const featuresData = [
         id: 3,
         title: 'Fully Customizable Signage',
         description: 'Let your customers instantly see their personalized products with our live preview.',
-        // image: './assets/03.png',
-        image: [
+        image: './assets/03.png',
+        images: [
             { src: './assets/dynamic/3/bg.png', alt: 'bg', className: "", dataAtroposOffset: "-1" },
             { src: './assets/dynamic/3/upper.png', alt: 'All-Inclusive Signage Solutions', className: 'absolute left-[0%] top-[0%] w-[100%] h-[100%] object-contain block z-10 max-w-none pointer-events-none transform-3d', style: { transitionDuration: "300ms", transform: "translate3d(0px, 0px, 0px)" }, dataAtroposOffset: "3" },
         ],
@@ -38,8 +38,8 @@ const featuresData = [
         id: 4,
         title: 'Personalized Font Selection',
         description: 'Use Conditions to narrow customer requirements and deliver the best experience.',
-        // image: './assets/04.png',
-        image: [
+        image: './assets/04.png',
+        images: [
             { src: './assets/dynamic/4/bg.png', alt: 'bg', className: "", dataAtroposOffset: "-1" },
             { src: './assets/dynamic/4/upper.png', alt: 'All-Inclusive Signage Solutions', className: 'absolute left-[0%] top-[0%] w-[100%] h-[100%] object-contain block z-10 max-w-none pointer-events-none transform-3d', style: { transitionDuration: "300ms", transform: "translate3d(0px, 0px, 0px)" }, dataAtroposOffset: "3" },
         ],
@@ -48,8 +48,8 @@ const featuresData = [
         id: 5,
         title: 'Dynamic Pricing',
         description: 'Adjust prices dynamically per personalization and display the price update real-time.',
-        // image: './assets/05.png',
-        image: [
+        image: './assets/05.png',
+        images: [
             { src: './assets/dynamic/5/bg.png', alt: 'bg', className: "", dataAtroposOffset: "-1" },
             { src: './assets/dynamic/5/upper.png', alt: 'All-Inclusive Signage Solutions', className: 'absolute left-[0%] top-[0%] w-[100%] h-[100%] object-contain block z-10 max-w-none pointer-events-none transform-3d', style: { transitionDuration: "300ms", transform: "translate3d(0px, 0px, 0px)" }, dataAtroposOffset: "3" },
         ],
@@ -58,8 +58,8 @@ const featuresData = [
         id: 6,
         title: 'Bold, Vibrant Color Options',
         description: 'Use different styles to keep your store sleek and functional on any device.',
-        // image: './assets/06.png',
-        image: [
+        image: './assets/06.png',
+        images: [
             { src: './assets/dynamic/6/bg.png', alt: 'bg', className: "", dataAtroposOffset: "-1" },
             { src: './assets/dynamic/6/upper.png', alt: 'All-Inclusive Signage Solutions', className: 'absolute left-[0%] top-[0%] w-[100%] h-[100%] object-contain block z-10 max-w-none pointer-events-none transform-3d', style: { transitionDuration: "300ms", transform: "translate3d(0px, 0px, 0px)" }, dataAtroposOffset: "3" },
         ],
@@ -68,8 +68,8 @@ const featuresData = [
         id: 7,
         title: 'All-Inclusive Signage Solutions',
         description: 'Use different styles to keep your store sleek and functional on any device.',
-        // image: './assets/07.png',
-        image: [
+        image: './assets/07.png',
+        images: [
             { src: './assets/dynamic/7/bg.png', alt: 'bg', className: "", dataAtroposOffset: "-1" },
             { src: './assets/dynamic/7/upper.png', alt: 'All-Inclusive Signage Solutions', className: 'absolute left-[0%] top-[0%] w-[100%] h-[100%] object-contain block z-10 max-w-none pointer-events-none transform-3d', style: { transitionDuration: "300ms", transform: "translate3d(0px, 0px, 0px)" }, dataAtroposOffset: "3" },
         ],
@@ -146,10 +146,10 @@ const Features = () => {
                             </button>
                         ))}
                     </div>
-                    <Atropos className="z-10 relative flex-1 md:w-2/3 lg:w-3/4 bg-transparent">
-                        <div shadow={false} className='relative transform-3d translate-z-0'>
-                            {selectedFeature?.image instanceof Array ? (
-                                selectedFeature?.image.map((img, index) => (
+                    <Atropos className="z-10 relative flex-1 md:w-2/3 lg:w-3/4 bg-transparent touch-none">
+                        <div className='relative transform-3d translate-z-0'>
+                            {selectedFeature?.images instanceof Array ? (
+                                selectedFeature?.images.map((img, index) => (
                                     <img
                                         key={index}
                                         src={img.src}

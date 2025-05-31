@@ -42,13 +42,22 @@ const Footer = () => {
             {/* <div className="mx-auto text-center bg-background/50 py-3">
                 <p className="!text-base">© {(new Date()).getFullYear()} Zepto Sign Customizer. All Rights Reserved</p>
             </div> */}
-            <div className="px-4 py-3 text-background relative">
+            <div className="text-background relative py-3 pt-8 px-4 flex md:flex-row-reverse flex-col items-start justify-end gap-4">
                 {/* <p className="!text-base">© {(new Date()).getFullYear()} Zepto Sign Customizer. All Rights Reserved</p> */}
-                <ul className="flex items-center justify-center gap-4">
-                    <li>Privacy</li>
-                    <li>Privacy Policy</li>
+                <ul className="list-none flex items-center justify-center gap-4 text-center md:absolute left-0 md:left-1/2 translate-x-0 md:translate-x-[-50%]">
+                    <li>
+                        <a className="border-b border-background" href="/contact">Contact</a>
+                    </li>
+                    <li>
+                        <a className="border-b border-background" href="/about-us">About Us</a>
+                    </li>
+                    <li>
+                        <a className="border-b border-background" href="">Privacy Policy</a>
+                    </li>
                 </ul>
-                <p className="!text-base absolute top-0 left-0">© {(new Date()).getFullYear()} Zepto Sign Customizer</p>
+                <a href="https://zeptoapps.com/" target="_blank" rel="noopener noreferrer" className="!text-base !font-oswald font-thin uppercase">
+                    <span>© Zepto Apps</span>
+                </a>
             </div>
         </footer>
     )

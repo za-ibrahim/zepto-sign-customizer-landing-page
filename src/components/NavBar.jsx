@@ -21,7 +21,9 @@ const NavBar = () => {
                 <div className="grid lg:grid-cols-4 grid-flow-col-dense">
                     <div className="flex items-center gap-3">
                         <div className="w-11 h-11 rounded-md overflow-hidden">
-                            <img src={logo} alt="logo" className="w-fit" />
+                            <a href="/">
+                                <img src={logo} alt="logo" className="w-fit" />
+                            </a>
                         </div>
                         {/* <h1 className="text-xl font-extrabold text-primary">Zepto Sign Customizer</h1> */}
                     </div>

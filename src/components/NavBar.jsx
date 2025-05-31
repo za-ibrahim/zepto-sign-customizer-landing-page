@@ -4,7 +4,7 @@ import ComponentLayout from "../layouts/ComponentLayout";
 
 export const LinkComponent = ({ href, className, children, ...props }) => {
     return (
-        <a {...props} href={href} className={`self-center text-md font-semibold text-text hover:text-primary cursor-pointer ${className}`}>{children}</a>
+        <a {...props} href={href} className={`self-center text-md font-semibold text-text hover:text-accent cursor-pointer ${className}`}>{children}</a>
     )
 }
 

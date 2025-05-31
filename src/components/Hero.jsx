@@ -32,7 +32,7 @@ const Hero = () => {
                                     The Custom<span id='specialI'>i</span>zer<br />Built to <br />Elevate Sales
                                 </span>
                             </Heading>
-                            <p className='text-base lg:text-lg text-center lg:text-left text-text/60 max-w-xl w-fit'>
+                            <p className='text-base lg:text-lg text-center lg:text-left text-text/90 max-w-xl w-fit'>
                                 Empower customers to create custom signs with live previews, complete design control, precise sizing, volumetric weight calculation, and full multi-language and currency support.
                             </p>
                             <div className='flex sm:flex-row flex-col items-center gap-4 pt-2 w-fit'>

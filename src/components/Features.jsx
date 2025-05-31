@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import ComponentLayout from '../layouts/ComponentLayout'
 import Heading from './Heading'
+import Atropos from 'atropos/react';
 
 const featuresData = [
     {
@@ -43,7 +44,10 @@ const featuresData = [
         id: 7,
         title: 'All-Inclusive Signage Solutions',
         description: 'Use different styles to keep your store sleek and functional on any device.',
-        image: './assets/07.png',
+        image: [
+            { src: './assets/dynamic/7/bg.png', alt: 'bg', className: "atropos-header-spacer relative w-full h-auto left-0 top-0", dataAtroposOffset: "1" },
+            { src: './assets/dynamic/7/upper.png', alt: 'All-Inclusive Signage Solutions', className: 'absolute left-[0%] top-[0%] w-[100%] h-[100%] object-contain block z-10 max-w-none pointer-events-none transform-3d', style: { transitionDuration: "300ms", transform: "translate3d(0px, 0px, 0px)" }, dataAtroposOffset: "2" },
+        ],
     },
 ];
 
@@ -117,18 +121,31 @@ const Features = () => {
                             </button>
                         ))}
                     </div>
-                    <div className="flex-1 md:w-2/3 lg:w-3/4 rounded-xl overflow-hidden shadow-md bg-background/50">
-                        <div>
-                            <img
-                                src={selectedFeature?.image}
-                                alt={selectedFeature?.title}
-                                className="w-full object-contain"
-                            />
+                    <Atropos className="relative flex-1 md:w-2/3 lg:w-3/4 bg-background/0">
+                        <div shadow={false} className='relative'>
+                            {selectedFeature?.image instanceof Array ? (
+                                selectedFeature?.image.map((img, index) => (
+                                    <img
+                                        key={index}
+                                        src={img.src}
+                                        alt={img.alt}
+                                        className={img.className || ""}
+                                        style={img.style || {}}
+                                        data-atropos-offset={img.dataAtroposOffset || null}
+                                    />
+                                ))
+                            ) : (
+                                <img
+                                    src={selectedFeature?.image}
+                                    alt={selectedFeature?.title}
+                                    className="w-full object-contain"
+                                />
+                            )}
                             {/* <div className='px-6 py-4 text-center'>
                                 <p className="leading-relaxed !text-base">{selectedFeature?.description}</p>
                             </div> */}
                         </div>
-                    </div>
+                    </Atropos>
                 </div>
             </ComponentLayout>
         </div>

@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState } from 'react';
 import ComponentLayout from '../layouts/ComponentLayout'
 import Heading from './Heading'
 import Atropos from 'atropos/react';

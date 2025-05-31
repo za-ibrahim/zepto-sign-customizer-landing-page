@@ -18,7 +18,11 @@ const featuresData = [
         id: 2,
         title: 'Worldwide Accessibility',
         description: 'Provide Options with Detail: Text, Color, Images, Uploads, & More at Your Command.',
-        image: './assets/02.png',
+        // image: './assets/02.png',
+        image: [
+            { src: './assets/dynamic/2/bg.png', alt: 'bg', className: "", dataAtroposOffset: "-1" },
+            { src: './assets/dynamic/2/upper.png', alt: 'All-Inclusive Signage Solutions', className: 'absolute left-[0%] top-[0%] w-[100%] h-[100%] object-contain block z-10 max-w-none pointer-events-none transform-3d', style: { transitionDuration: "300ms", transform: "translate3d(0px, 0px, 0px)" }, dataAtroposOffset: "3" },
+        ],
     },
     {
         id: 3,

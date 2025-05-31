@@ -81,21 +81,21 @@ const Features = () => {
     const selectedFeature = featuresData?.find(feature => feature?.id === selectedTab);
 
     return (
-        <div id='features' className='py-15 pb-24'>
+        <div id='features' className='py-15 pb-24 bg-background/70'>
             <Heading>Effective Features for Better Sales</Heading>
             <ComponentLayout>
                 {/* Layout for small devices (accordion style) */}
                 <div className="md:hidden w-full">
-                    <div className="flex flex-col gap-3">
+                    <div className="flex flex-col gap-4">
                         {featuresData?.map((feature) => (
                             <div key={feature?.id}>
-                                <div className="w-full rounded-lg overflow-hidden shadow-sm">
+                                <div className="w-full rounded-lg overflow-hidden shadow-lg">
                                     <button
                                         onClick={() => setSelectedTab(feature?.id)}
                                         className={`w-full p-4 text-left font-semibold transition-colors duration-300 flex justify-between items-center
                                                 ${selectedTab === feature?.id
                                                 ? 'tryBtn text-white'
-                                                : 'bg-background/50'
+                                                : 'bg-background'
                                             }`}
                                     >
                                         {feature?.title}
@@ -133,10 +133,10 @@ const Features = () => {
                             <button
                                 key={feature?.id}
                                 onClick={() => setSelectedTab(feature?.id)}
-                                className={`p-4 group rounded-xl text-left transition-colors duration-300 font-semibold cursor-pointer overflow-hidden
+                                className={`p-4 group rounded-xl text-left transition-colors duration-300 font-semibold cursor-pointer overflow-hidden shadow-md
                                             ${selectedTab === feature?.id
                                         ? 'tryBtn text-white shadow-sm'
-                                        : 'bg-background/50'
+                                        : 'bg-background'
                                     }`}
                             >
                                 <div className='relative overflow-hidden'>

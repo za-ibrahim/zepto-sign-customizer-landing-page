@@ -35,7 +35,7 @@ function App() {
     <>
       <NavBar />
       <div className='pt-[95px]' />
-      <main>
+      <main className="relative overflow-hidden">
         <RouterProvider router={router} />
       </main>
       <ZendeskChat />

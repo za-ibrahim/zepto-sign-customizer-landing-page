@@ -8,7 +8,11 @@ const featuresData = [
         id: 1,
         title: 'Stunningly Realistic Previews',
         description: 'Go beyond limits with endless customization, offering personalization as unique as your vision.',
-        image: './assets/01.png',
+        // image: './assets/01.png',
+        image: [
+            { src: './assets/dynamic/1/bg.png', alt: 'bg', className: "", dataAtroposOffset: "-1" },
+            { src: './assets/dynamic/1/upper.png', alt: 'All-Inclusive Signage Solutions', className: 'absolute left-[0%] top-[0%] w-[100%] h-[100%] object-contain block z-10 max-w-none pointer-events-none transform-3d', style: { transitionDuration: "300ms", transform: "translate3d(0px, 0px, 0px)" }, dataAtroposOffset: "3" },
+        ],
     },
     {
         id: 2,
@@ -20,19 +24,31 @@ const featuresData = [
         id: 3,
         title: 'Fully Customizable Signage',
         description: 'Let your customers instantly see their personalized products with our live preview.',
-        image: './assets/03.png',
+        // image: './assets/03.png',
+        image: [
+            { src: './assets/dynamic/3/bg.png', alt: 'bg', className: "", dataAtroposOffset: "-1" },
+            { src: './assets/dynamic/3/upper.png', alt: 'All-Inclusive Signage Solutions', className: 'absolute left-[0%] top-[0%] w-[100%] h-[100%] object-contain block z-10 max-w-none pointer-events-none transform-3d', style: { transitionDuration: "300ms", transform: "translate3d(0px, 0px, 0px)" }, dataAtroposOffset: "3" },
+        ],
     },
     {
         id: 4,
         title: 'Personalized Font Selection',
         description: 'Use Conditions to narrow customer requirements and deliver the best experience.',
-        image: './assets/04.png',
+        // image: './assets/04.png',
+        image: [
+            { src: './assets/dynamic/4/bg.png', alt: 'bg', className: "", dataAtroposOffset: "-1" },
+            { src: './assets/dynamic/4/upper.png', alt: 'All-Inclusive Signage Solutions', className: 'absolute left-[0%] top-[0%] w-[100%] h-[100%] object-contain block z-10 max-w-none pointer-events-none transform-3d', style: { transitionDuration: "300ms", transform: "translate3d(0px, 0px, 0px)" }, dataAtroposOffset: "3" },
+        ],
     },
     {
         id: 5,
         title: 'Dynamic Pricing',
         description: 'Adjust prices dynamically per personalization and display the price update real-time.',
-        image: './assets/05.png',
+        // image: './assets/05.png',
+        image: [
+            { src: './assets/dynamic/5/bg.png', alt: 'bg', className: "", dataAtroposOffset: "-1" },
+            { src: './assets/dynamic/5/upper.png', alt: 'All-Inclusive Signage Solutions', className: 'absolute left-[0%] top-[0%] w-[100%] h-[100%] object-contain block z-10 max-w-none pointer-events-none transform-3d', style: { transitionDuration: "300ms", transform: "translate3d(0px, 0px, 0px)" }, dataAtroposOffset: "3" },
+        ],
     },
     {
         id: 6,
@@ -126,7 +142,7 @@ const Features = () => {
                         ))}
                     </div>
                     <Atropos className="z-10 relative flex-1 md:w-2/3 lg:w-3/4 bg-transparent">
-                        <div shadow={false} className='relative'>
+                        <div shadow={false} className='relative transform-3d translate-z-0'>
                             {selectedFeature?.image instanceof Array ? (
                                 selectedFeature?.image.map((img, index) => (
                                     <img

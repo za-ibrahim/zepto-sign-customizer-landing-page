@@ -38,7 +38,11 @@ const featuresData = [
         id: 6,
         title: 'Bold, Vibrant Color Options',
         description: 'Use different styles to keep your store sleek and functional on any device.',
-        image: './assets/06.png',
+        // image: './assets/06.png',
+        image: [
+            { src: './assets/dynamic/6/bg.png', alt: 'bg', className: "", dataAtroposOffset: "-1" },
+            { src: './assets/dynamic/6/upper.png', alt: 'All-Inclusive Signage Solutions', className: 'absolute left-[0%] top-[0%] w-[100%] h-[100%] object-contain block z-10 max-w-none pointer-events-none transform-3d', style: { transitionDuration: "300ms", transform: "translate3d(0px, 0px, 0px)" }, dataAtroposOffset: "3" },
+        ],
     },
     {
         id: 7,
@@ -121,7 +125,7 @@ const Features = () => {
                             </button>
                         ))}
                     </div>
-                    <Atropos className="relative flex-1 md:w-2/3 lg:w-3/4 bg-transparent">
+                    <Atropos className="z-10 relative flex-1 md:w-2/3 lg:w-3/4 bg-transparent">
                         <div shadow={false} className='relative'>
                             {selectedFeature?.image instanceof Array ? (
                                 selectedFeature?.image.map((img, index) => (

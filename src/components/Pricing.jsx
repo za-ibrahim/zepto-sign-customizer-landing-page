@@ -27,11 +27,13 @@ const Pricing = () => {
     }, []);
 
     return (
-        <div id='pricing' className='py-15 bg-background/70 pb-24'>
-            <Heading subHeading="Smart plans for every step of your growth">Simple, Transparent Monthly Plans</Heading>
-            <ComponentLayout>
-                <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6'>
-                    {/* <PackageCard
+        <>
+            <img src="./assets/abstract-wavy-line.png" alt="abstract" className='float-slow absolute left-[-80px] object-cover -z-[1] rotate-[60deg] scale-x-[-1]' />
+            <div id='pricing' className='py-15 bg-background/70 pb-24'>
+                <Heading subHeading="Smart plans for every step of your growth">Simple, Transparent Monthly Plans</Heading>
+                <ComponentLayout>
+                    <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6'>
+                        {/* <PackageCard
                         title="Free version"
                         price="0"
                         features={[
@@ -45,36 +47,37 @@ const Pricing = () => {
                             "Add text to configurator",
                         ]}
                     /> */}
-                    <PackageCard
-                        title="Essential"
-                        price="14.99"
-                        features={[
-                            "Up to 5 attributed orders per month",
-                            "Unlimited customizers",
-                            "All Features Included",
-                        ]}
-                    />
-                    <PackageCard
-                        title="Growth"
-                        price="29.99"
-                        features={[
-                            "Up to 15 attributed orders per month",
-                            "Unlimited customizers",
-                            "All Features Included",
-                        ]}
-                    />
-                    <PackageCard
-                        title="Unlimited"
-                        price="149.99"
-                        features={[
-                            "Unlimited orders per month",
-                            "Unlimited customizers",
-                            "All Features Included",
-                        ]}
-                    />
-                </div>
-            </ComponentLayout>
-        </div>
+                        <PackageCard
+                            title="Essential"
+                            price="14.99"
+                            features={[
+                                "Up to 5 attributed orders per month",
+                                "Unlimited customizers",
+                                "All Features Included",
+                            ]}
+                        />
+                        <PackageCard
+                            title="Growth"
+                            price="29.99"
+                            features={[
+                                "Up to 15 attributed orders per month",
+                                "Unlimited customizers",
+                                "All Features Included",
+                            ]}
+                        />
+                        <PackageCard
+                            title="Unlimited"
+                            price="149.99"
+                            features={[
+                                "Unlimited orders per month",
+                                "Unlimited customizers",
+                                "All Features Included",
+                            ]}
+                        />
+                    </div>
+                </ComponentLayout>
+            </div>
+        </>
     );
 }
 

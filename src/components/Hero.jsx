@@ -21,14 +21,14 @@ const Hero = () => {
     return (
         <>
             <img src="./assets/abstract-wavy-line.png" alt="abstract" className='float-slow absolute top-[100vh] right-[0px] object-cover -z-[1] rotate-[-45deg]' />
-            <div className='h-[calc(100vh-6rem)] flex items-center justify-center bg-gradient-to-b from-background/10 to-background/90 overflow-hidden relative'>
+            <div className='min-h-[calc(100vh-6rem)] pt-28 pb-2 flex items-center justify-center bg-gradient-to-b from-background/10 to-background/90 overflow-hidden relative'>
                 <ComponentLayout>
                     <div className='flex flex-col-reverse lg:flex-row items-center justify-center gap-10 text-center'>
 
                         {/* Left Text Section */}
                         <div id="heroText" className='flex flex-col items-center lg:items-start justify-center gap-6 max-w-3xl mx-auto z-10 text-white text-left'>
                             <Heading className="!px-0 !py-0 lg:!text-left lg:!items-start !w-fit">
-                                <span id="mainText" className='text-[2.7rem] xl:text-6xl lg:text-5xl leading-tight font-bold bg-clip-text text-transparent bg-gradient-to-r from-accent via-primary to-accent'>
+                                <span id="mainText" className='text-[2.7rem] md:text-6xl xl:text-6xl lg:text-5xl leading-tight font-bold bg-clip-text text-transparent bg-gradient-to-r from-accent via-primary to-accent'>
                                     The Custom<span id='specialI'>i</span>zer<br />Built to <br />Elevate Sales
                                 </span>
                             </Heading>

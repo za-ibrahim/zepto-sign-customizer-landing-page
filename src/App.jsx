@@ -34,7 +34,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <div className='pt-[95px]' />
+      {/* <div className='pt-[95px]' /> */}
       <main className="relative overflow-hidden">
         <RouterProvider router={router} />
       </main>

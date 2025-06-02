@@ -4,7 +4,7 @@ import ComponentLayout from '../layouts/ComponentLayout'
 
 const AboutUs = () => {
     return (
-        <div className='py-15 bg-gradient-to-b from-background/30 to-background/90 pb-24'>
+        <div className='py-15 pt-28 bg-gradient-to-b from-background/30 to-background/90 pb-24'>
             <ComponentLayout>
                 <Heading>
                     <span className='text-5xl'>Zepto Apps</span>

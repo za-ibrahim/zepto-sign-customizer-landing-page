@@ -92,13 +92,16 @@ const Features = () => {
                                 <div className="w-full rounded-lg overflow-hidden shadow-lg">
                                     <button
                                         onClick={() => setSelectedTab(feature?.id)}
-                                        className={`w-full p-4 text-left font-semibold transition-colors duration-300 flex justify-between items-center
+                                        className={`w-full group p-4 text-left font-semibold transition-colors duration-300 flex justify-between items-center
                                                 ${selectedTab === feature?.id
                                                 ? 'tryBtn text-white'
                                                 : 'bg-background'
                                             }`}
                                     >
-                                        {feature?.title}
+                                        <div className='relative overflow-hidden'>
+                                            <span className='block group-hover:-translate-y-8 translate-y-0 transition-all ease-out duration-300 p-0 m-0'>{feature?.title}</span>
+                                            <span className='absolute top-0 block translate-y-8 group-hover:translate-y-0 transition-all ease-out duration-300 p-0 m-0'>{feature?.title}</span>
+                                        </div>
                                         <span className={`transform transition-transform duration-300 ${selectedTab === feature?.id ? 'rotate-180' : 'rotate-0'}`}>
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
                                                 <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />

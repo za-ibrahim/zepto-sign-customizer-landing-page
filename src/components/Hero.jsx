@@ -21,7 +21,7 @@ const Hero = () => {
     return (
         <>
             <img src="./assets/abstract-wavy-line.png" alt="abstract" className='float-slow absolute top-[100vh] right-[0px] object-cover -z-[1] rotate-[-45deg]' />
-            <div className='h-[calc(100vh-6rem)] flex items-center justify-center bg-gradient-to-b from-background/10 to-background/70 overflow-hidden relative'>
+            <div className='h-[calc(100vh-6rem)] flex items-center justify-center bg-gradient-to-b from-background/10 to-background/90 overflow-hidden relative'>
                 <ComponentLayout>
                     <div className='flex flex-col-reverse lg:flex-row items-center justify-center gap-10 text-center'>
 

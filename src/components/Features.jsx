@@ -81,7 +81,7 @@ const Features = () => {
     const selectedFeature = featuresData?.find(feature => feature?.id === selectedTab);
 
     return (
-        <div id='features' className='py-15 pb-24 bg-background/70'>
+        <div id='features' className='py-15 pb-24 bg-gradient-to-b from-background/30 to-background/90'>
             <Heading>Effective Features for Better Sales</Heading>
             <ComponentLayout>
                 {/* Layout for small devices (accordion style) */}

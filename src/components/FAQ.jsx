@@ -75,7 +75,7 @@ const FAQ = () => {
     };
 
     return (
-        <div className="py-15 bg-background/70 pb-24">
+        <div className="py-15 bg-gradient-to-b from-background/30 to-background/90 pb-24">
             <Heading>Frequently Asked Questions</Heading>
             <ComponentLayout>
                 <div className="flex flex-col gap-4">

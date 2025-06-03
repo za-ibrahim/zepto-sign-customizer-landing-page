@@ -11,7 +11,7 @@ const AboutUs = () => {
                 </Heading>
                 <div className='flex flex-col gap-8 text-base leading-relaxed pb-12 text-text'>
                     <p>
-                        Zepto Apps is a software company based in Bangladesh that specializes in providing solutions for Shopify Apps, Custom E-commerce, and Web application Development. Over the last 7 years, we have successfully served 68k customers with our premium products and services. Our SaaS application, Zepto Product Personalizer, is empowering 16,000 E-commerce businesses across 142 countries.
+                        Zepto Apps is a software company based in Bangladesh that specializes in providing solutions for Shopify Apps, Custom E-commerce, and Web application Development. Over the last 7 years, we have successfully served 68k customers with our premium products and services. We are empowering 16,000 E-commerce businesses across 142 countries.
                     </p>
                     <p>
                         At Zepto Apps, we take pride in our operational efficiency, processing 8.75 million requests per day. Our team consists of talented individuals from diverse backgrounds.

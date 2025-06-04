@@ -17,7 +17,7 @@ const NavBar = () => {
     }
 
     return (
-        <div className="lg:px-4 py-4 fixed w-full lg:w-[calc(100%-20px)] lg:top-[10px] left-1/2 transform -translate-x-1/2 z-50 backdrop-blur-md bg-background/70 shadow-md lg:rounded-lg">
+        <div className="lg:px-4 py-4 w-full fixed lg:w-[calc(100%-20px)] lg:top-[10px] left-1/2 transform -translate-x-1/2 z-50 backdrop-blur-md bg-background/70 shadow-md lg:rounded-lg">
             <ComponentLayout>
                 <div className="grid lg:grid-cols-4 grid-flow-col-dense">
                     <div className="flex items-center gap-3">

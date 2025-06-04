@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import logo from "../assets/logo_2.webp";
 import ComponentLayout from "../layouts/ComponentLayout";
+import Atropos from "atropos/react";
 
 export const LinkComponent = ({ href, className, children, ...props }) => {
     return (
@@ -20,11 +21,13 @@ const NavBar = () => {
             <ComponentLayout>
                 <div className="grid lg:grid-cols-4 grid-flow-col-dense">
                     <div className="flex items-center gap-3">
-                        <div className="w-11 h-11 rounded-md overflow-hidden">
-                            <a href="/">
-                                <img src={logo} alt="logo" className="w-fit" />
-                            </a>
-                        </div>
+                        <Atropos shadow={false} className='relative'>
+                            <div className="w-11 h-11 rounded-md overflow-hidden">
+                                <a href="/">
+                                    <img src={logo} alt="logo" className="w-fit" />
+                                </a>
+                            </div>
+                        </Atropos>
                         {/* <h1 className="text-xl font-extrabold text-primary">Zepto Sign Customizer</h1> */}
                     </div>
                     {/* Nav menu with dropdown if needed and responsive */}
@@ -46,6 +49,7 @@ const NavBar = () => {
                     </nav>
                     <div className="flex items-center justify-end gap-2">
                         {/* Extra two buttons for Demo & Try for free */}
+                        
                         <div className="flex gap-2 text-md">
                             {/* <a href="#demo" className="px-4 py-2 rounded-full border border-primary text-text font-semibold hover:text-primary transition">Demo</a> */}
                             <a href="https://apps.shopify.com/neon-sign-customizer" target="_blank" rel="noopener noreferrer" className="tryBtn  !text-sm px-4 py-2 rounded-full font-semibold">

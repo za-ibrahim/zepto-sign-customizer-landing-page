@@ -19,7 +19,7 @@ const Promot = () => {
                     <button className='group w-fit flex justify-between items-center shadow gap-2 border border-background bg-transparent px-6 py-3 sm:text-base text-sm text-background font-semibold rounded-full transition-all duration-300'>
                         <span>View Live Demo</span>
                         <span className='group-hover:translate-x-1 transition-all duration-300'>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill='black' width="18" height="18" viewBox="0 0 18 18"><path d="M5.47 3.53 10.94 9 5.469 14.471l1.06 1.06L13.061 9 6.531 2.47z" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill='white' width="18" height="18" viewBox="0 0 18 18"><path d="M5.47 3.53 10.94 9 5.469 14.471l1.06 1.06L13.061 9 6.531 2.47z" /></svg>
                         </span>
                     </button>
                 </div>

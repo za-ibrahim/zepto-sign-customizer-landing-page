@@ -52,7 +52,7 @@ const Footer = () => {
                         <a className="border-b border-background" href="/about-us">About Us</a>
                     </li>
                     <li>
-                        <a className="border-b border-background" href="">Privacy Policy</a>
+                        <a className="border-b border-background" href="/privacy-policy">Privacy Policy</a>
                     </li>
                 </ul>
                 <a href="https://zeptoapps.com/" target="_blank" rel="noopener noreferrer" className="!text-base !font-oswald font-thin uppercase">

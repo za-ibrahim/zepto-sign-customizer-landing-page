@@ -11,6 +11,7 @@ import Home from './pages/Home'
 import ContactUs from "./pages/ContactUs";
 import AboutUs from "./pages/AboutUs";
 import PageNotFound from "./pages/PageNotFound";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,11 @@ const router = createBrowserRouter([
     path: "/contact",
     exact: true,
     element: <ContactUs />,
+  },
+  {
+    path: "/privacy-policy",
+    exact: true,
+    element: <PrivacyPolicy />,
   },
   {
     path: "*",

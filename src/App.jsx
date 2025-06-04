@@ -10,6 +10,7 @@ import ZendeskChat from './components/ZendeskChat'
 import Home from './pages/Home'
 import ContactUs from "./pages/ContactUs";
 import AboutUs from "./pages/AboutUs";
+import PageNotFound from "./pages/PageNotFound";
 
 const router = createBrowserRouter([
   {
@@ -19,11 +20,17 @@ const router = createBrowserRouter([
   },
   {
     path: "/about-us",
+    exact: true,
     element: <AboutUs />,
   },
   {
     path: "/contact",
+    exact: true,
     element: <ContactUs />,
+  },
+  {
+    path: "*",
+    element: <PageNotFound />,
   }
 ]);
 

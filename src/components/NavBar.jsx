@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import logo from "../assets/logo_2.webp";
 import ComponentLayout from "../layouts/ComponentLayout";
 import Atropos from "atropos/react";
@@ -49,7 +49,7 @@ const NavBar = () => {
                     </nav>
                     <div className="flex items-center justify-end gap-2">
                         {/* Extra two buttons for Demo & Try for free */}
-                        
+
                         <div className="flex gap-2 text-md">
                             {/* <a href="#demo" className="px-4 py-2 rounded-full border border-primary text-text font-semibold hover:text-primary transition">Demo</a> */}
                             <a href="https://apps.shopify.com/neon-sign-customizer" target="_blank" rel="noopener noreferrer" className="tryBtn  !text-sm px-4 py-2 rounded-full font-semibold">

@@ -68,7 +68,7 @@ const FAQItem = ({ question, answer, open, onClick, idx }) => (
 );
 
 const FAQ = () => {
-    const [openIndex, setOpenIndex] = useState(null);
+    const [openIndex, setOpenIndex] = useState(0);
 
     const toggleIndex = (idx) => {
         setOpenIndex(openIndex === idx ? null : idx);

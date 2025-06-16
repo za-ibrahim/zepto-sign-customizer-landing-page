@@ -27,6 +27,7 @@ const Hero = () => {
                         "absolute inset-0",
                         "[background-size:40px_40px]",
                         "[background-image:linear-gradient(to_right,#c4105e0a_1px,transparent_1px),linear-gradient(to_bottom,#c4105e0a_1px,transparent_1px)]",
+                        "[mask-image:radial-gradient(circle_at_top,black_60%,transparent_100%)]"
                     ].join(' ')}
                 />
                 <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-background/10 [mask-image:radial-gradient(ellipse_at_center,transparent_1%,black)]"></div>
@@ -65,9 +66,9 @@ const Hero = () => {
                         <div id='img' className='relative hidden lg:block bg-clip-border'>
                             {/* <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-primary/50 rounded-3xl blur-2xl opacity-40 animate-pulse"></div> */}
                             <div id='heroImg' className='relative z-10'>
-                                <Atropos shadow={false} className='relative'>
+                                {/* <Atropos shadow={false} className='relative'> */}
                                     <img className='select-none w-[800px] object-contain' src="./assets/hero.png" alt="Neon Customizer Preview" />
-                                </Atropos>
+                                {/* </Atropos> */}
                             </div>
                         </div>
 

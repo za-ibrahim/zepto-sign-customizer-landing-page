@@ -77,8 +77,8 @@ const NavBar = () => {
                 <nav className={`lg:hidden overflow-hidden ease-in-out transition-all duration-300 ${isOpen ? 'max-h-[calc(100vh-90px)] text-xl pt-8' : 'text-[0px] max-h-0 p-0 m-0'}`}>
                     <div className="flex flex-col items-center justify-evenly gap-10 overflow-x-auto pb-5">
                         <LinkComponent href="/">Home</LinkComponent>
-                        <LinkComponent href="#features">Features</LinkComponent>
-                        <LinkComponent href="#pricing">Pricing</LinkComponent>
+                        <LinkComponent href="/#features">Features</LinkComponent>
+                        <LinkComponent href="/#pricing">Pricing</LinkComponent>
                         <LinkComponent href="/contact">Contact us</LinkComponent>
                     </div>
                 </nav>

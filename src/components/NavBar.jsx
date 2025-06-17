@@ -1,5 +1,6 @@
 import { useState } from "react";
 import logo from "../assets/logo_2.webp";
+import logo_v1 from "../assets/logo_v1.png";
 import ComponentLayout from "../layouts/ComponentLayout";
 import Atropos from "atropos/react";
 
@@ -22,9 +23,9 @@ const NavBar = () => {
                 <div className="grid lg:grid-cols-4 grid-flow-col-dense">
                     <div className="flex items-center gap-3">
                         <Atropos shadow={false} className='relative'>
-                            <div className="w-11 h-11 rounded-md overflow-hidden">
+                            <div className="w-auto h-11 rounded-md overflow-hidden">
                                 <a href="/">
-                                    <img src={logo} alt="logo" className="w-fit" />
+                                    <img src={logo_v1} alt="logo" className="h-full" />
                                 </a>
                             </div>
                         </Atropos>

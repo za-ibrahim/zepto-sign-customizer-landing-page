@@ -1,8 +1,9 @@
 import { useEffect } from 'react';
 import Heading from './Heading';
 import ComponentLayout from '../layouts/ComponentLayout';
-import Atropos from 'atropos/react';
-import 'atropos/css'
+import heroImg from '../assets/hero.png';
+// import Atropos from 'atropos/react';
+// import 'atropos/css'
 
 const Hero = () => {
     useEffect(() => {
@@ -67,7 +68,7 @@ const Hero = () => {
                             {/* <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-primary/50 rounded-3xl blur-2xl opacity-40 animate-pulse"></div> */}
                             <div id='heroImg' className='relative z-10'>
                                 {/* <Atropos shadow={false} className='relative'> */}
-                                    <img className='select-none w-[800px] object-contain' src="./assets/hero.png" alt="Neon Customizer Preview" />
+                                    <img className='select-none w-[800px] object-contain' src={heroImg} alt="Neon Customizer Preview" />
                                 {/* </Atropos> */}
                             </div>
                         </div>

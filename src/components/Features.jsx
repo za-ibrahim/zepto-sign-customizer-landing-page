@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import ComponentLayout from '../layouts/ComponentLayout'
 import Heading from './Heading'
 import Atropos from 'atropos/react';
@@ -102,6 +102,15 @@ const Features = () => {
     const [selectedTab, setSelectedTab] = useState(featuresData?.[0].id);
     const selectedFeature = featuresData?.find(feature => feature?.id === selectedTab);
 
+    useEffect(() => {
+        featuresData.forEach(feature => {
+            new Image().src = feature.image;
+            feature.images.forEach(img => {
+                new Image().src = img.src;
+            });
+        });
+    }, []);
+
     return (
         <div id='features' className='py-15 pb-24 bg-gradient-to-b from-background/30 to-background/90'>
             <Heading>Effective Features for Better Sales</Heading>
@@ -179,8 +188,9 @@ const Features = () => {
                                         key={index}
                                         src={img.src}
                                         alt={img.alt}
+                                        loading="eager"
+                                        style={{ ...(img.style) }}
                                         className={img.className || ""}
-                                        style={img.style || {}}
                                         data-atropos-offset={img.dataAtroposOffset || null}
                                     />
                                 ))

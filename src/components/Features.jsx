@@ -3,25 +3,25 @@ import ComponentLayout from '../layouts/ComponentLayout'
 import Heading from './Heading'
 import Atropos from 'atropos/react';
 
-import _1 from '../assets/dynamic/1/1.png';
+import _1 from '../assets/dynamic/1/01.png';
 import _1_bg from '../assets/dynamic/1/bg.png';
 import _1_upper from '../assets/dynamic/1/upper.png';
-import _2 from '../assets/dynamic/2/2.png';
+import _2 from '../assets/dynamic/2/02.png';
 import _2_bg from '../assets/dynamic/2/bg.png';
 import _2_upper from '../assets/dynamic/2/upper.png';
-import _3 from '../assets/dynamic/3/3.png';
+import _3 from '../assets/dynamic/3/03.png';
 import _3_bg from '../assets/dynamic/3/bg.png';
 import _3_upper from '../assets/dynamic/3/upper.png';
-import _4 from '../assets/dynamic/4/4.png';
+import _4 from '../assets/dynamic/4/04.png';
 import _4_bg from '../assets/dynamic/4/bg.png';
 import _4_upper from '../assets/dynamic/4/upper.png';
-import _5 from '../assets/dynamic/5/5.png';
+import _5 from '../assets/dynamic/5/05.png';
 import _5_bg from '../assets/dynamic/5/bg.png';
 import _5_upper from '../assets/dynamic/5/upper.png';
-import _6 from '../assets/dynamic/6/6.png';
+import _6 from '../assets/dynamic/6/06.png';
 import _6_bg from '../assets/dynamic/6/bg.png';
 import _6_upper from '../assets/dynamic/6/upper.png';
-import _7 from '../assets/dynamic/7/7.png';
+import _7 from '../assets/dynamic/7/07.png';
 import _7_bg from '../assets/dynamic/7/bg.png';
 import _7_upper from '../assets/dynamic/7/upper.png';
 

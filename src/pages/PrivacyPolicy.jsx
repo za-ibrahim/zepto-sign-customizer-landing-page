@@ -4,7 +4,7 @@ import Heading from '../components/Heading'
 
 const PrivacyPolicy = () => {
     return (
-        <div className='py-15 pt-28 bg-gradient-to-b from-background/30 to-background/90 pb-24'>
+        <div className='pt-28 bg-gradient-to-b from-background/30 to-background/90 pb-24'>
             <ComponentLayout>
                 <Heading>Privacy Policy</Heading>
                 <div className='flex flex-col gap-8 text-base leading-relaxed pb-12 text-text'>

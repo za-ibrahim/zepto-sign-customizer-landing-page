@@ -16,7 +16,7 @@ const FormItem = ({ type, label, name, placeholder = "" }) => {
 
 const ContactUs = () => {
     return (
-        <div className='py-15 pt-28 bg-gradient-to-b from-background/30 to-background/90 pb-24'>
+        <div className='pt-28 bg-gradient-to-b from-background/30 to-background/90 pb-24'>
             <ComponentLayout>
                 <Heading>Contact Us</Heading>
                 <div className='max-w-3xl mx-auto pb-16'>

@@ -112,7 +112,7 @@ const Features = () => {
     }, []);
 
     return (
-        <div id='features' className='py-15 pb-24 bg-gradient-to-b from-background/30 to-background/90'>
+        <div id='features' className='bg-gradient-to-b from-background/30 to-background/90 pb-24'>
             <Heading>Effective Features for Better Sales</Heading>
             <ComponentLayout>
                 {/* Layout for small devices (accordion style) */}

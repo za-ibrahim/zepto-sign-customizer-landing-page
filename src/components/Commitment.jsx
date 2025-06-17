@@ -3,7 +3,7 @@ import ComponentLayout from '../layouts/ComponentLayout'
 
 const Commitment = () => {
     return (
-        <div className='bg-gradient-to-b from-background/90 to-background/30 py-15 pb-24'>
+        <div className='bg-gradient-to-b from-background/90 to-background/30 pb-24'>
             <Heading>Simple, Intuitive, and Hassle-Free</Heading>
             <ComponentLayout>
                 <div className='grid md:grid-cols-2 grid-cols-1 gap-6'>

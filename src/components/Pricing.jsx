@@ -29,7 +29,7 @@ const Pricing = () => {
     return (
         <>
             <img src="./assets/abstract-wavy-line.png" alt="abstract" className='float-slow absolute left-[-80px] object-cover -z-[1] rotate-[60deg] scale-x-[-1]' />
-            <div id='pricing' className='py-15 bg-gradient-to-b from-background/90 to-background/30 pb-24'>
+            <div id='pricing' className='bg-gradient-to-b from-background/90 to-background/30 pb-24'>
                 <Heading subHeading="Smart plans for every step of your growth">Simple, Transparent Monthly Plans</Heading>
                 <ComponentLayout>
                     <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6'>

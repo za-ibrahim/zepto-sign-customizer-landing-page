@@ -21,13 +21,13 @@ const NavBar = () => {
             <ComponentLayout>
                 <div className="grid lg:grid-cols-4 grid-flow-col-dense">
                     <div className="flex items-center gap-3">
-                        <Atropos shadow={false} className='relative'>
+                        {/* <Atropos shadow={false} className='relative'> */}
                             <div className="w-auto h-11 rounded-md overflow-hidden">
                                 <a href="/">
                                     <img src={logo_v1} alt="logo" className="h-full" />
                                 </a>
                             </div>
-                        </Atropos>
+                        {/* </Atropos> */}
                         {/* <h1 className="text-xl font-extrabold text-primary">Zepto Sign Customizer</h1> */}
                     </div>
                     {/* Nav menu with dropdown if needed and responsive */}

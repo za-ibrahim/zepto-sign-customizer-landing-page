@@ -189,7 +189,7 @@ const Features = () => {
                                         src={img.src}
                                         alt={img.alt}
                                         loading="eager"
-                                        style={{ ...(img.style) }}
+                                        style={img.style || {}}
                                         className={img.className || ""}
                                         data-atropos-offset={img.dataAtroposOffset || null}
                                     />

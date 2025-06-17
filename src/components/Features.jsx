@@ -3,75 +3,97 @@ import ComponentLayout from '../layouts/ComponentLayout'
 import Heading from './Heading'
 import Atropos from 'atropos/react';
 
+import _1 from '../assets/dynamic/1/1.png';
+import _1_bg from '../assets/dynamic/1/bg.png';
+import _1_upper from '../assets/dynamic/1/upper.png';
+import _2 from '../assets/dynamic/2/2.png';
+import _2_bg from '../assets/dynamic/2/bg.png';
+import _2_upper from '../assets/dynamic/2/upper.png';
+import _3 from '../assets/dynamic/3/3.png';
+import _3_bg from '../assets/dynamic/3/bg.png';
+import _3_upper from '../assets/dynamic/3/upper.png';
+import _4 from '../assets/dynamic/4/4.png';
+import _4_bg from '../assets/dynamic/4/bg.png';
+import _4_upper from '../assets/dynamic/4/upper.png';
+import _5 from '../assets/dynamic/5/5.png';
+import _5_bg from '../assets/dynamic/5/bg.png';
+import _5_upper from '../assets/dynamic/5/upper.png';
+import _6 from '../assets/dynamic/6/6.png';
+import _6_bg from '../assets/dynamic/6/bg.png';
+import _6_upper from '../assets/dynamic/6/upper.png';
+import _7 from '../assets/dynamic/7/7.png';
+import _7_bg from '../assets/dynamic/7/bg.png';
+import _7_upper from '../assets/dynamic/7/upper.png';
+
 const featuresData = [
     {
         id: 1,
         title: 'Stunningly Realistic Previews',
         description: 'Go beyond limits with endless customization, offering personalization as unique as your vision.',
-        image: './assets/01.png',
+        image: _1,
         images: [
-            { src: './assets/dynamic/1/bg.png', alt: 'bg', className: "", dataAtroposOffset: "-1" },
-            { src: './assets/dynamic/1/upper.png', alt: 'All-Inclusive Signage Solutions', className: 'absolute left-[0%] top-[0%] w-[100%] h-[100%] object-contain block z-10 max-w-none pointer-events-none transform-3d', style: { transitionDuration: "300ms", transform: "translate3d(0px, 0px, 0px)" }, dataAtroposOffset: "3" },
+            { src: _1_bg, alt: 'bg', className: "", dataAtroposOffset: "-1" },
+            { src: _1_upper, alt: 'All-Inclusive Signage Solutions', className: 'absolute left-[0%] top-[0%] w-[100%] h-[100%] object-contain block z-10 max-w-none pointer-events-none transform-3d', style: { transitionDuration: "300ms", transform: "translate3d(0px, 0px, 0px)" }, dataAtroposOffset: "3" },
         ],
     },
     {
         id: 2,
         title: 'Worldwide Accessibility',
         description: 'Provide Options with Detail: Text, Color, Images, Uploads, & More at Your Command.',
-        image: './assets/02.png',
+        image: _2,
         images: [
-            { src: './assets/dynamic/2/bg.png', alt: 'bg', className: "", dataAtroposOffset: "-1" },
-            { src: './assets/dynamic/2/upper.png', alt: 'All-Inclusive Signage Solutions', className: 'absolute left-[0%] top-[0%] w-[100%] h-[100%] object-contain block z-10 max-w-none pointer-events-none transform-3d', style: { transitionDuration: "300ms", transform: "translate3d(0px, 0px, 0px)" }, dataAtroposOffset: "3" },
+            { src: _2_bg, alt: 'bg', className: "", dataAtroposOffset: "-1" },
+            { src: _2_upper, alt: 'All-Inclusive Signage Solutions', className: 'absolute left-[0%] top-[0%] w-[100%] h-[100%] object-contain block z-10 max-w-none pointer-events-none transform-3d', style: { transitionDuration: "300ms", transform: "translate3d(0px, 0px, 0px)" }, dataAtroposOffset: "3" },
         ],
     },
     {
         id: 3,
         title: 'Fully Customizable Signage',
         description: 'Let your customers instantly see their personalized products with our live preview.',
-        image: './assets/03.png',
+        image: _3,
         images: [
-            { src: './assets/dynamic/3/bg.png', alt: 'bg', className: "", dataAtroposOffset: "-1" },
-            { src: './assets/dynamic/3/upper.png', alt: 'All-Inclusive Signage Solutions', className: 'absolute left-[0%] top-[0%] w-[100%] h-[100%] object-contain block z-10 max-w-none pointer-events-none transform-3d', style: { transitionDuration: "300ms", transform: "translate3d(0px, 0px, 0px)" }, dataAtroposOffset: "3" },
+            { src: _3_bg, alt: 'bg', className: "", dataAtroposOffset: "-1" },
+            { src: _3_upper, alt: 'All-Inclusive Signage Solutions', className: 'absolute left-[0%] top-[0%] w-[100%] h-[100%] object-contain block z-10 max-w-none pointer-events-none transform-3d', style: { transitionDuration: "300ms", transform: "translate3d(0px, 0px, 0px)" }, dataAtroposOffset: "3" },
         ],
     },
     {
         id: 4,
         title: 'Personalized Font Selection',
         description: 'Use Conditions to narrow customer requirements and deliver the best experience.',
-        image: './assets/04.png',
+        image: _4,
         images: [
-            { src: './assets/dynamic/4/bg.png', alt: 'bg', className: "", dataAtroposOffset: "-1" },
-            { src: './assets/dynamic/4/upper.png', alt: 'All-Inclusive Signage Solutions', className: 'absolute left-[0%] top-[0%] w-[100%] h-[100%] object-contain block z-10 max-w-none pointer-events-none transform-3d', style: { transitionDuration: "300ms", transform: "translate3d(0px, 0px, 0px)" }, dataAtroposOffset: "3" },
+            { src: _4_bg, alt: 'bg', className: "", dataAtroposOffset: "-1" },
+            { src: _4_upper, alt: 'All-Inclusive Signage Solutions', className: 'absolute left-[0%] top-[0%] w-[100%] h-[100%] object-contain block z-10 max-w-none pointer-events-none transform-3d', style: { transitionDuration: "300ms", transform: "translate3d(0px, 0px, 0px)" }, dataAtroposOffset: "3" },
         ],
     },
     {
         id: 5,
         title: 'Dynamic Pricing',
         description: 'Adjust prices dynamically per personalization and display the price update real-time.',
-        image: './assets/05.png',
+        image: _5,
         images: [
-            { src: './assets/dynamic/5/bg.png', alt: 'bg', className: "", dataAtroposOffset: "-1" },
-            { src: './assets/dynamic/5/upper.png', alt: 'All-Inclusive Signage Solutions', className: 'absolute left-[0%] top-[0%] w-[100%] h-[100%] object-contain block z-10 max-w-none pointer-events-none transform-3d', style: { transitionDuration: "300ms", transform: "translate3d(0px, 0px, 0px)" }, dataAtroposOffset: "3" },
+            { src: _5_bg, alt: 'bg', className: "", dataAtroposOffset: "-1" },
+            { src: _5_upper, alt: 'All-Inclusive Signage Solutions', className: 'absolute left-[0%] top-[0%] w-[100%] h-[100%] object-contain block z-10 max-w-none pointer-events-none transform-3d', style: { transitionDuration: "300ms", transform: "translate3d(0px, 0px, 0px)" }, dataAtroposOffset: "3" },
         ],
     },
     {
         id: 6,
         title: 'Bold, Vibrant Color Options',
         description: 'Use different styles to keep your store sleek and functional on any device.',
-        image: './assets/06.png',
+        image: _6,
         images: [
-            { src: './assets/dynamic/6/bg.png', alt: 'bg', className: "", dataAtroposOffset: "-1" },
-            { src: './assets/dynamic/6/upper.png', alt: 'All-Inclusive Signage Solutions', className: 'absolute left-[0%] top-[0%] w-[100%] h-[100%] object-contain block z-10 max-w-none pointer-events-none transform-3d', style: { transitionDuration: "300ms", transform: "translate3d(0px, 0px, 0px)" }, dataAtroposOffset: "3" },
+            { src: _6_bg, alt: 'bg', className: "", dataAtroposOffset: "-1" },
+            { src: _6_upper, alt: 'All-Inclusive Signage Solutions', className: 'absolute left-[0%] top-[0%] w-[100%] h-[100%] object-contain block z-10 max-w-none pointer-events-none transform-3d', style: { transitionDuration: "300ms", transform: "translate3d(0px, 0px, 0px)" }, dataAtroposOffset: "3" },
         ],
     },
     {
         id: 7,
         title: 'All-Inclusive Signage Solutions',
         description: 'Use different styles to keep your store sleek and functional on any device.',
-        image: './assets/07.png',
+        image: _7,
         images: [
-            { src: './assets/dynamic/7/bg.png', alt: 'bg', className: "", dataAtroposOffset: "-1" },
-            { src: './assets/dynamic/7/upper.png', alt: 'All-Inclusive Signage Solutions', className: 'absolute left-[0%] top-[0%] w-[100%] h-[100%] object-contain block z-10 max-w-none pointer-events-none transform-3d', style: { transitionDuration: "300ms", transform: "translate3d(0px, 0px, 0px)" }, dataAtroposOffset: "3" },
+            { src: _7_bg, alt: 'bg', className: "", dataAtroposOffset: "-1" },
+            { src: _7_upper, alt: 'All-Inclusive Signage Solutions', className: 'absolute left-[0%] top-[0%] w-[100%] h-[100%] object-contain block z-10 max-w-none pointer-events-none transform-3d', style: { transitionDuration: "300ms", transform: "translate3d(0px, 0px, 0px)" }, dataAtroposOffset: "3" },
         ],
     },
 ];

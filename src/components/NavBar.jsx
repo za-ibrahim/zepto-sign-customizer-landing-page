@@ -1,5 +1,4 @@
 import { useState } from "react";
-import logo from "../assets/logo_2.webp";
 import logo_v1 from "../assets/logo_v1.png";
 import ComponentLayout from "../layouts/ComponentLayout";
 import Atropos from "atropos/react";

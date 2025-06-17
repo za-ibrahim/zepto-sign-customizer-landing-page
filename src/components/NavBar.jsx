@@ -1,7 +1,7 @@
 import { useState } from "react";
-import logo_v1 from "../assets/logo_v1.png";
+// import logo_v1 from "../assets/logo_v1.png";
+import logo_v2 from "../assets/logo_v2.png";
 import ComponentLayout from "../layouts/ComponentLayout";
-import Atropos from "atropos/react";
 
 export const LinkComponent = ({ href, className, children, ...props }) => {
     return (
@@ -24,7 +24,7 @@ const NavBar = () => {
                         {/* <Atropos shadow={false} className='relative'> */}
                             <div className="w-auto h-11 rounded-md overflow-hidden">
                                 <a href="/">
-                                    <img src={logo_v1} alt="logo" className="h-full" />
+                                    <img src={logo_v2} alt="logo" className="h-full" />
                                 </a>
                             </div>
                         {/* </Atropos> */}

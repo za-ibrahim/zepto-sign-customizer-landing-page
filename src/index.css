@@ -36,7 +36,7 @@ button {
 }
 
 footer {
-  background: url("./assets/footer-image-zepto.jpg");
+  background: url("/assets/footer-image-zepto.jpg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;

@@ -42,7 +42,7 @@ const Footer = () => {
             {/* <div className="mx-auto text-center bg-background/50 py-3">
                 <p className="!text-base">© {(new Date()).getFullYear()} Zepto Sign Customizer. All Rights Reserved</p>
             </div> */}
-            <div className="text-background relative py-3 pt-8 px-4 flex md:flex-row-reverse flex-col items-start justify-end gap-4">
+            <div className="text-background relative py-3 px-4 flex md:flex-row-reverse flex-col items-start justify-end gap-4">
                 {/* <p className="!text-base">© {(new Date()).getFullYear()} Zepto Sign Customizer. All Rights Reserved</p> */}
                 <ul className="list-none flex items-center justify-center gap-4 text-center md:absolute left-0 md:left-1/2 translate-x-0 md:translate-x-[-50%]">
                     <li>

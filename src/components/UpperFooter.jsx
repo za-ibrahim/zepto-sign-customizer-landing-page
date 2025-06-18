@@ -3,9 +3,9 @@ import 'atropos/css'
 
 const UpperFooter = () => {
     return (
-        <div className='bg-[#110425]'>
+        <div>
             <div className='relative md:aspect-[800/244] aspect-[489/244] h-full mx-auto max-w-full'>
-                <img src="./assets/footer-image-mutated.png" alt="footer image" className='mx-auto object-cover size-full md:object-contain' />
+                {/* <img src="./assets/footer-image-zepto.jpg" alt="footer image" className='mx-auto object-cover size-full md:object-contain' /> */}
                 <div className='absolute bottom-0 w-full flex items-end justify-center'>
                     <a href="https://apps.shopify.com/neon-sign-customizer" target="_blank" rel="noopener noreferrer" className=''>
                         <button className='tryBtn text-black md:px-6 md:py-3 sm:text-base px-3 py-2 text-xs font-semibold rounded-full gap-2 transition-all duration-300'>

@@ -14,7 +14,7 @@ const Hero = () => {
 
         gsap.fromTo(
             "#img",
-            { opacity: 0, scale: 0 },
+            { opacity: 0, scale: 0.85 },
             { opacity: 1, scale: 1, duration: 0.8, delay: 0.5, ease: 'power3.out' }
         );
     }, []);

@@ -4,7 +4,7 @@ import 'atropos/css'
 const UpperFooter = () => {
     return (
         <div>
-            <div className='relative md:aspect-[800/244] aspect-[489/244] h-full mx-auto max-w-full'>
+            <div className='relative sm:aspect-[16/4.5] aspect-[16/9] h-full mx-auto max-w-full'>
                 {/* <img src="./assets/footer-image-zepto.jpg" alt="footer image" className='mx-auto object-cover size-full md:object-contain' /> */}
                 <div className='absolute bottom-0 w-full flex items-end justify-center'>
                     <a href="https://apps.shopify.com/neon-sign-customizer" target="_blank" rel="noopener noreferrer" className=''>

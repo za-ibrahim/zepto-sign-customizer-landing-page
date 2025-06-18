@@ -18,7 +18,8 @@ body::before {
 }
 
 .neon-text {
-  filter: drop-shadow(0 0 5px --color-primary) drop-shadow(0 0 10px --color-secondary) drop-shadow(0 0 20px #00ffff);
+  filter: drop-shadow(0 0 5px --color-primary)
+    drop-shadow(0 0 10px --color-secondary) drop-shadow(0 0 20px #00ffff);
   font-size: 3rem;
   font-family: "Orbitron", sans-serif;
   letter-spacing: 2px;
@@ -29,7 +30,8 @@ body::before {
   transition: all 0.125s ease-in-out;
 
   :hover {
-    filter: drop-shadow(0 0 5px var(--color-primary)) drop-shadow(0 0 10px var(--color-secondary)) drop-shadow(0 0 20px #00ffff);
+    filter: drop-shadow(0 0 5px var(--color-primary))
+      drop-shadow(0 0 10px var(--color-secondary)) drop-shadow(0 0 20px #00ffff);
   }
 
   .inner-element {
@@ -42,4 +44,12 @@ body::before {
     color: white;
     transform: translateZ(60px);
   }
+}
+
+footer {
+  background: url("/assets/footer-image-zepto_2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #010103;
 }

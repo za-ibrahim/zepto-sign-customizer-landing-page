@@ -4,7 +4,7 @@ import UpperFooter from "./UpperFooter"
 
 const Footer = () => {
     return (
-        <footer className="pt-4 bg-[#110425]">
+        <footer className="bg-[#110425]">
             <UpperFooter />
             {/* <ComponentLayout>
                 <div className="grid md:grid-cols-3 grid-cols-1  gap-8 py-8 pb-12">

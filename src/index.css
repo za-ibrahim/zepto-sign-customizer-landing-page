@@ -35,6 +35,14 @@ button {
   cursor: pointer;
 }
 
+footer {
+  background: url("./assets/footer-image-zepto.jpg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #010103;
+}
+
 .custom-shape {
   position: relative;
   border-radius: 8px;

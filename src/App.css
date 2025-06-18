@@ -43,11 +43,3 @@ body::before {
     transform: translateZ(60px);
   }
 }
-
-footer {
-  background: url("./assets/footer-image-zepto.jpg");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #010103;
-}

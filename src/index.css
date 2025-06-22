@@ -190,6 +190,40 @@ button {
   }
 }
 
+@keyframes rotate {
+  0% {
+    transform: rotate(360deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-continuous {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Rotate Classes */
+.rotate {
+  animation: rotate 3s linear infinite;
+}
+
+.rotate-slow {
+  animation: rotate-continuous 10s linear infinite;
+}
+
+.rotate-medium {
+  animation: rotate-continuous 5s linear infinite;
+}
+
 /* Float Classes */
 .float {
   animation: float 3s ease-in-out infinite;

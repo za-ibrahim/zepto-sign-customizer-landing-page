@@ -1,10 +1,12 @@
-import React from 'react'
 import Heading from './Heading'
 import ComponentLayout from '../layouts/ComponentLayout'
+import gearGif from '../assets/gear.gif'
 
 const Promot = () => {
     return (
-        <div className='py-15 bg-accent/60 pb-24'>
+        <div className='py-15 bg-accent/60 pb-24 relative overflow-hidden'>
+            <img src={gearGif} alt="gear" className='absolute -top-20 -right-20 opacity-10 w-48' />
+            <img src={gearGif} alt="gear" className='absolute -bottom-20 -left-20 opacity-10 w-48' />
             <ComponentLayout>
                 <Heading><span className="text-background">Try our best Sign Customizer—built to keep you ahead</span></Heading>
                 <div className='flex sm:flex-row flex-col items-center mx-auto gap-4 pt-2 w-fit'>

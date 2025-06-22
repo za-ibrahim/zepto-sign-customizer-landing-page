@@ -37,7 +37,8 @@ const Hero = () => {
 
                         {/* Left Text Section */}
                         <div id="heroText" className='flex flex-col items-center lg:items-start justify-center gap-6 max-w-3xl mx-auto z-10 text-white text-left'>
-                            <Heading className="!px-0 !py-0 lg:!text-left lg:!items-start !w-fit">
+                            <Heading className="relative !px-0 !py-0 lg:!text-left lg:!items-start !w-fit">
+                                {/* <img className='rotate-slow w-28 !absolute -z-50 -left-30 -top-30' src="/assets/star_glow.webp" alt="star" /> */}
                                 <span id="mainText" className='text-[2.7rem] md:text-6xl xl:text-6xl lg:text-5xl leading-tight font-bold bg-clip-text text-transparent bg-gradient-to-r from-accent via-primary to-accent'>
                                     The Custom<span id='specialI'>i</span>zer<br />Built to <br />Elevate Sales
                                 </span>
@@ -68,7 +69,7 @@ const Hero = () => {
                             {/* <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-primary/50 rounded-3xl blur-2xl opacity-40 animate-pulse"></div> */}
                             <div id='heroImg' className='relative z-10'>
                                 {/* <Atropos shadow={false} className='relative'> */}
-                                    <img className='select-none w-[800px] object-contain' src={heroImg} alt="Neon Customizer Preview" />
+                                <img className='select-none w-[800px] object-contain' src={heroImg} alt="Neon Customizer Preview" />
                                 {/* </Atropos> */}
                             </div>
                         </div>

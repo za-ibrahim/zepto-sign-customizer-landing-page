@@ -24,7 +24,7 @@ const NavBar = () => {
                         {/* <Atropos shadow={false} className='relative'> */}
                             <div className="w-auto h-11 rounded-md overflow-hidden">
                                 <a href="/">
-                                    <img src={logo_v2} alt="logo" className="h-full" />
+                                    <img src="./logo_v2.png" alt="logo" className="h-full" />
                                 </a>
                             </div>
                         {/* </Atropos> */}

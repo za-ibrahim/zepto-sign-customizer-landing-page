@@ -1,5 +1,3 @@
-import ComponentLayout from "../layouts/ComponentLayout"
-import { LinkComponent } from "./NavBar"
 import UpperFooter from "./UpperFooter"
 
 const Footer = () => {

@@ -1,6 +1,3 @@
-import Atropos from 'atropos/react';
-import 'atropos/css'
-
 const UpperFooter = () => {
     return (
         <div>

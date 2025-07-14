@@ -1,4 +1,3 @@
-import React from 'react'
 import ComponentLayout from '../layouts/ComponentLayout'
 import Heading from '../components/Heading'
 

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import ComponentLayout from '../layouts/ComponentLayout'
 import Heading from './Heading'
 import Atropos from 'atropos/react';
+import 'atropos/css';
 
 import _1 from '../assets/dynamic/1/01.webp';
 import _1_bg from '../assets/dynamic/1/bg.webp';

@@ -55,12 +55,14 @@ const Hero = () => {
                                         </span>
                                     </button>
                                 </a>
-                                <button className='group w-fit flex justify-between items-center shadow-md gap-2 border border-background/40 backdrop-blur-md bg-background/20  px-6 py-3 sm:text-base text-sm text-text font-semibold rounded-full transition-all duration-300'>
-                                    <span>Live Demo</span>
-                                    <span className='group-hover:translate-x-1 transition-all duration-300'>
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill='black' width="18" height="18" viewBox="0 0 18 18"><path d="M5.47 3.53 10.94 9 5.469 14.471l1.06 1.06L13.061 9 6.531 2.47z" /></svg>
-                                    </span>
-                                </button>
+                                <a href="https://zepto-sign-customizer.myshopify.com/products/custom-neon" target='_blank' rel='noopener noreferrer'>
+                                    <button className='group w-fit flex justify-between items-center shadow-md gap-2 border border-background/40 backdrop-blur-md bg-background/20  px-6 py-3 sm:text-base text-sm text-text font-semibold rounded-full transition-all duration-300'>
+                                        <span>Live Demo</span>
+                                        <span className='group-hover:translate-x-1 transition-all duration-300'>
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill='black' width="18" height="18" viewBox="0 0 18 18"><path d="M5.47 3.53 10.94 9 5.469 14.471l1.06 1.06L13.061 9 6.531 2.47z" /></svg>
+                                        </span>
+                                    </button>
+                                </a>
                             </div>
                         </div>
 
